@@ -2,6 +2,7 @@ import { Outlet } from "react-router"
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import { Toaster } from "sonner";
+import Cover from "./cover/page";
 
 
 export default function Home() {
@@ -11,7 +12,8 @@ export default function Home() {
       <div className="flex-1 flex flex-col max-w-[--breakpoint-2xl] ml-64">
         <Header />
         <main>
-          <Outlet />
+          {/* <Outlet /> */}
+          <Cover />
         </main>
       </div>
       <Toaster />
