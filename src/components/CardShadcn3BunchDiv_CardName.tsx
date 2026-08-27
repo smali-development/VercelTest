@@ -7,7 +7,7 @@ interface CardShadcn3BunchDiv_CardNameProps {
     cardName: string;
 }
 
-const EXTENSIONS = ["jpg", "jpeg", "avif", "webp"];
+const EXTENSIONS = ["jpg", "jpeg", "avif", "webp", "png"];
 
 async function findImage(basePath: string): Promise<string | null> {
     for (const ext of EXTENSIONS) {
