@@ -1,6 +1,8 @@
 import CardShadcn3BunchDiv from "@/components/CardShadcn3BunchDiv";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
 import CardShadcn3BunchDiv_CardNamePrefix from "@/components/CardShadcn3BunchDiv_CardNamePrefix";
+import CardShadcn from "@/components/CardShadcn";
+import Image from "next/image";
 const Chapter1_Tool_Trolley = async () => {
     return (
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
@@ -23,12 +25,13 @@ const Chapter1_Tool_Trolley = async () => {
                 </ol>
             </div>
             {/* <li>1. Torque Wrench</li> */}
+            
             <CardShadcn3BunchDiv
                 cardName="1. Torque Wrench"
                 viewImagesLink="https://www.bing.com/images/search?q=torque%20wrench%20tool"
                 images={[
-                    // "/images/TORQUE_WRENCH_1.jpg",
-                    "https://www.bing.com/images/search?view=detailV2&ccid=g8k4jkOx&id=D8E1D3FEB9A5D7718D90813FB59855FEA5E4656F&thid=OIP.g8k4jkOx9P1XVTFuedlRHgHaHa&mediaurl=https%3a%2f%2ftoolshop.co.za%2fwp-content%2fuploads%2f2023%2f10%2f10-TO-50-NM-NORBAR-TORQUE-WRENCH-1-1024x1024.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.83c9388e43b1f4fd5755316e79d9511e%3frik%3db2Xkpf5VmLU%252fgQ%26pid%3dImgRaw%26r%3d0&exph=1024&expw=1024&q=torque+wrench+tool&FORM=IRPRST&ck=E884254B43621314138D3AD971239B73&selectedIndex=0&itb=0",
+                    "/images/TORQUE_WRENCH_1.jpg",
+                    // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR39uKseLZ8A01h-hkjl5DGlpx-hcWv6uWMR-_wI2DKo7rz_EE_WBx3fa7l&s=10",
                     "/images/TORQUE_WRENCH_2.jpg",
                     "/images/TORQUE_WRENCH_3.webp",
                 ]}
