@@ -1,26 +1,14 @@
-import { Outlet } from "react-router"
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import { Toaster } from "sonner";
-import Cover from "./cover/page";
-
-
-export default function Home() {
+// src/app/page.tsx
+export default function HomePage() {
   return (
-    <div className="h-screen flex bg-background">
-      <Sidebar />
-      <div className="flex-1 flex flex-col max-w-[--breakpoint-2xl] ml-64">
-        <Header />
-        <main>
-          {/* <Outlet /> */}
-          <Cover />
-        </main>
-      </div>
-      <Toaster />
+    <div>
+      <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 mb-4">
+        Welcome to the Home Page
+      </h2>
+      <p className="text-gray-600 leading-relaxed">
+        This is the main dashboard landing view. Notice how navigating to the 
+        About page via the sidebar is instantaneous and doesn't trigger a heavy page refresh.
+      </p>
     </div>
-
-
   );
 }
-
-// https://youtu.be/sE_F02e76dQ?list=PLOl4xN4eJVEP3AAIhueYYd9NYKqBw08vh&t=1877

@@ -7,7 +7,7 @@ const Chapter5_Engine_Types = () => {
 
             <div>
                 <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter 5 — Engine Types</h1>
-                <p className="text-slate-600 mb-8">Engine Types.</p>
+                <p className="text-slate-600 mb-8">(EC/IC, CI/SI, 2/4-stroke, OSV/OHV/SOHC/DOHC/VVT-i/etc.).</p>
             </div>
             <div>
                 <h2 className="section-heading">Engine Types</h2>
