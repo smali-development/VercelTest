@@ -5,26 +5,8 @@ const path = require("path");
 const OUTPUT_DIR = path.join(__dirname, "public", "images");
 
 const TOOL_NAMES = [
-    "Piston Crown (Head)",
-    "Piston Skirt",
-    "Ring Lands",
-    "Compression Ring",
-    "Wiper Ring",
-    "Oil Control Ring",
-    "Ring Grooves",
-    "Piston Pin / Wrist Pin",
-    "Pin Boss",
-    "Piston Cooling Holes",
-    "Piston Dishing",
-    "Piston Center Mark",
-    "Connecting Rod Boss",
-    "Piston Oil Passages",
-    "Piston Land Gap",
-    "Small End Bearing",
-    "Big End Bearing",
-    "Connecting Rod",
-    "Connecting Rod Cap",
-    "Plunger",
+  "Oil Pan Without Partition",
+  "Oil Pan With Partition"
 ];
 
 const IMAGES_PER_TOOL = 3;

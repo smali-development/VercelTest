@@ -16,10 +16,10 @@ const Chapter7_Engine_Proper_System = () => {
                     <li><Link href={"/Chapter7_Engine_Proper_System/Cylinder_Head_Parts"} className="text-blue-500 hover:underline">1. Cylinder Head</Link></li>
                     <li><Link href={"/Chapter7_Engine_Proper_System/Cylinder_Block_Parts"} className="text-blue-500 hover:underline">2. Cylinder Block</Link></li>
                     <li><Link href={"/Chapter7_Engine_Proper_System/Piston_Parts"} className="text-blue-500 hover:underline">3. Piston</Link></li>
-                    <li>4. Crank Shaft</li>
+                    <li><Link href={"/Chapter7_Engine_Proper_System/Crankshaft_Parts"} className="text-blue-500 hover:underline">4. Crank Shaft</Link></li>
                     <li>5. Fly Wheel</li>
                     <li>6. Valve Mechanism & Timing</li>
-                    <li>7. Drive Belt</li>
+                    <li><Link href={"/Chapter7_Engine_Proper_System/Drive_Belt_Type"} className="text-blue-500 hover:underline"> 7. Drive Belt</Link></li>
                     <li>8. Oil Pan</li>
                 </ol>
             </div>
