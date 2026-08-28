@@ -1,4 +1,5 @@
 import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
+import Link from 'next/link'
 import React from 'react'
 
 const Forced_Induction_System_Diesel_Engine = () => {
@@ -6,8 +7,9 @@ const Forced_Induction_System_Diesel_Engine = () => {
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
 
             <div>
-                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Intake_System</h1>
-                <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Forced_Induction_System_Diesel_Engine</h2>
+                 <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Engine Base System</h1>
+                <h1 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Intake_System</h1>
+                <h2 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Forced_Induction_System_Diesel_Engine</h2>
                 {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
             </div>
             <div>
@@ -17,6 +19,7 @@ const Forced_Induction_System_Diesel_Engine = () => {
                     <li>2. Supercharger</li>
                     <li>3. Compound Charging</li>
                     <li>4. Ram-Air Intake</li>
+                    <li><Link href={"/Chapter6_Engine_Base_System/Intake_System/Forced_Induction_System_Diesel_Engine/Forced_Induction_System_Parts"} className="text-blue-500 hover:underline">5. Forced_Induction_System_Parts</Link></li>
                 </ol>
             </div>
             <CardShadcn3BunchDiv_CardName cardName="Turbocharger" />

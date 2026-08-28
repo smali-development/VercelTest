@@ -2,7 +2,7 @@ import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardN
 import Link from 'next/link'
 import React from 'react'
 
-const Chapter7_Engine_Proper_System = () => {
+const Engine_Proper_System = () => {
     return (
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
 
@@ -35,4 +35,4 @@ const Chapter7_Engine_Proper_System = () => {
     )
 }
 
-export default Chapter7_Engine_Proper_System
+export default Engine_Proper_System
