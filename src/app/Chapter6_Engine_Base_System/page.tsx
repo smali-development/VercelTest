@@ -1,5 +1,7 @@
 import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
+import Link from 'next/link'
 import React from 'react'
+
 
 const Chapter6_Engine_Base_System = () => {
     return (
@@ -12,8 +14,9 @@ const Chapter6_Engine_Base_System = () => {
             <div>
                 <h2 className="section-heading">Ten major sub-systems:</h2>
                 <ol>
+
                     <li>1. Engine Proper System</li>
-                    <li>2. Intake System</li>
+                    <li><Link href={"/Chapter7_Engine_Proper_System/Cylinder_Head_Parts"} className="text-blue-500 hover:underline">2. Intake System</Link></li>
                     <li>3. Fuel System</li>
                     <li>4. Ignition System</li>
                     <li>5. Exhaust System</li>
@@ -26,7 +29,7 @@ const Chapter6_Engine_Base_System = () => {
             </div>
             <CardShadcn3BunchDiv_CardName cardName="Engine Proper System" />
             <CardShadcn3BunchDiv_CardName cardName="Intake System" />
-            <CardShadcn3BunchDiv_CardName cardName="Fuel System" /> 
+            <CardShadcn3BunchDiv_CardName cardName="Fuel System" />
             <CardShadcn3BunchDiv_CardName cardName="Ignition System" />
             <CardShadcn3BunchDiv_CardName cardName="Exhaust System" />
             <CardShadcn3BunchDiv_CardName cardName="Lubrication System" />

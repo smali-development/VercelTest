@@ -5,8 +5,25 @@ const path = require("path");
 const OUTPUT_DIR = path.join(__dirname, "public", "images");
 
 const TOOL_NAMES = [
-  "Oil Pan Without Partition",
-  "Oil Pan With Partition"
+ "Pre Air Cleaner",
+  "Oil Bath type Air Cleaner",
+  "Cyclone type air Cleaner",
+  "Paper Types",
+  "Fabric Types",
+  "Oil Bath types",
+  "Housing",
+  "Filter Element",
+  "Air Intake Duct",
+  "Mass Air Flow Sensor (MAF)",
+  "Intake Air Temperature Sensor (IAT)",
+  "Map Sensor",
+  "Mechanical Throttle Body",
+  "Electronic Throttle Body",
+  "Step Motor Type",
+  "Rotary Solenoid Valve type",
+  "Throttle Plate (Body / Butterfly Valve)",
+  "Throttle Position Sensor (TPS)",
+  "Idle Air Control Valve (IACV) = (ISCV)"
 ];
 
 const IMAGES_PER_TOOL = 3;
