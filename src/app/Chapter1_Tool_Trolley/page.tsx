@@ -1,8 +1,5 @@
 import CardShadcn3BunchDiv from "@/components/CardShadcn3BunchDiv";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
-import CardShadcn3BunchDiv_CardNamePrefix from "@/components/CardShadcn3BunchDiv_CardNamePrefix";
-import CardShadcn from "@/components/CardShadcn";
-import Image from "next/image";
 const Chapter1_Tool_Trolley = async () => {
     return (
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">

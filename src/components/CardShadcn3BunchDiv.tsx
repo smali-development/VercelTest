@@ -6,6 +6,9 @@ interface CardShadcn3BunchDivProps {
     images: string[]; // up to 3 image paths
 }
 
+
+
+
 export default function CardShadcn3BunchDiv({ cardName, viewImagesLink, images }: CardShadcn3BunchDivProps) {
     return (
         <div className="border border-slate-200 rounded-lg p-4">

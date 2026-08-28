@@ -4,60 +4,27 @@ const path = require("path");
 
 const OUTPUT_DIR = path.join(__dirname, "public", "images");
 
-// const TOOL_NAMES = [
-//     "Hammer",
-//     "Ball Peen Hammer",
-//     "Claw Hammer",
-//     "Rubber Mallet",
-//     "Piston Ring Compressor",
-//     "Stud Remover",
-// ];
 const TOOL_NAMES = [
-    "Valve Lifter",
-    "Valve Lapper",
-    "Valve Grinding Paste",
-    "Adjustable Wrench",
-    "Pipe Wrench",
-    "Hacksaw",
-    "Nylon Brush",
-    "Steel Wire Brush",
-    "Flat File",
-    "Triangular File",
-    "Square File",
-    "Round File",
-    "Half-Round File",
-    "Wheel Spanner",
-    "Oil Can",
-    "Chisel",
-    "Oil Filter Wrench",
-    "Center Punch",
-    "Scraper",
-    "Speed Handle",
-    "Star Allen Key",
-    "Six-Point (Hex) Allen Key",
-    "Feeler Gauge",
-    "Socket Set",
-    "Deep Socket",
-    "Universal Joint",
-    "Ratchet Handle",
-    "Sliding T-Handle",
-    "Half Extension Bar",
-    "Full Extension Bar",
-    "L-Handle Tommy Bar",
-    "Combination Spanner",
-    "Ring Spanner",
-    "Box End Spanner",
-    "Open End Spanner",
-    "Adjustable (Dock) Spanner",
-    "Piston Ring Expander",
-    "Grip Pliers",
-    "Monkey Pliers",
-    "Slip Joint Pliers",
-    "Combination Pliers",
-    "Cutter Nose Pliers",
-    "Long Nose Pliers",
-    "Circlip Pliers Internal",
-    "Circlip Pliers External",
+    "Piston Crown (Head)",
+    "Piston Skirt",
+    "Ring Lands",
+    "Compression Ring",
+    "Wiper Ring",
+    "Oil Control Ring",
+    "Ring Grooves",
+    "Piston Pin / Wrist Pin",
+    "Pin Boss",
+    "Piston Cooling Holes",
+    "Piston Dishing",
+    "Piston Center Mark",
+    "Connecting Rod Boss",
+    "Piston Oil Passages",
+    "Piston Land Gap",
+    "Small End Bearing",
+    "Big End Bearing",
+    "Connecting Rod",
+    "Connecting Rod Cap",
+    "Plunger",
 ];
 
 const IMAGES_PER_TOOL = 3;
@@ -144,3 +111,7 @@ async function run() {
 }
 
 run();
+
+
+// for install: npm install node-fetch@2
+// for run : node download-images.js

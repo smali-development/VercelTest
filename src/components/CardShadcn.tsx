@@ -12,7 +12,15 @@ export default function CardShadcn({ imagePath}: CardShadcnProps) {
     <Card className="w-72">
    
       <CardContent>
-        <Image src={imagePath} alt={imagePath} width={96} height={96} className="w-full h-auto rounded-md" />
+        <Image 
+  src={imagePath} 
+  alt="Image description" 
+  width={150} // Original ya screen ke mutabiq barha size dein
+  height={150} // Sahi ratio ke mutabiq height dein
+  // quality={95} // High quality ke liye 90-95 sab se behtareen hai
+  priority // Yeh lagane se image jaldi load hogi aur saaf dikhegi
+  className="w-full h-auto rounded-md" 
+/>
       </CardContent>
      
     </Card>
