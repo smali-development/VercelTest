@@ -32,7 +32,7 @@ const Cover = () => {
                     target="_blank"
                     rel="noopener"
                     className="pill-link whitespace-nowrap">Ch.6 Engine Base System</Link></li>
-                <li><Link href={"/Chapter7_Engine_Proper_System"}
+                <li><Link href={"/Engine_Proper_System"}
                     target="_blank"
                     rel="noopener"
                     className="pill-link whitespace-nowrap">Ch.7 Engine Proper System</Link></li>

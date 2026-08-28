@@ -15,7 +15,7 @@ const Chapter6_Engine_Base_System = () => {
                 <h2 className="section-heading">Ten major sub-systems:</h2>
                 <ol>
 
-                    <li>1. Engine Proper System</li>
+                    <li><Link href={"/Chapter6_Engine_Base_System/Engine_Proper_System"} className="text-blue-500 hover:underline">1. Engine Proper System</Link></li>
                     <li><Link href={"/Chapter6_Engine_Base_System/Intake_System"} className="text-blue-500 hover:underline">2. Intake System</Link></li>
                     <li>3. Fuel System</li>
                     <li>4. Ignition System</li>

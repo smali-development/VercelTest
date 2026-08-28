@@ -57,11 +57,7 @@ export default function RootLayout({
                 rel="noopener"
                 className="pill-link whitespace-nowrap">Ch.6 Engine Base System</Link>
               </li>
-              <li>
-                <Link href={"/Chapter7_Engine_Proper_System"}
-                rel="noopener"
-                className="pill-link whitespace-nowrap">Ch.7 Engine Proper System</Link>
-              </li>
+            
             </ul>
           </nav>
         </aside>
