@@ -1,22 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { BsFire, BsTools } from "react-icons/bs";
-import { FaArrowRightToBracket, FaBars, FaTemperatureHigh } from "react-icons/fa6";
+import { FaTemperatureHigh } from "react-icons/fa6";
 import { SlEnergy } from "react-icons/sl";
 import { PiEngineBold } from "react-icons/pi";
 import { GiClaymoreExplosive } from "react-icons/gi";
-import { MdDoubleArrow } from "react-icons/md";
 
-export default function Sidebar() {
-    // Collapsed by default (collapsed = width 16 / w-16, expanded = width 64 / w-64)
-    const [isExpanded, setIsExpanded] = useState(false);
+interface SidebarProps {
+    isExpanded: boolean;
+}
 
-    const toggleSidebar = () => {
-        setIsExpanded((prev) => !prev);
-    };
-
+export default function Sidebar({ isExpanded }: SidebarProps) {
     const navItems = [
         { href: "/Chapter1_Tool_Trolley", label: "Ch.1 Tool Trolley (8 tool boxes)", icon: <BsTools size={20} /> },
         { href: "/Chapter2_Fire_Triangle", label: "Ch.2 Fire Triangle", icon: <BsFire size={20} /> },
@@ -28,44 +23,10 @@ export default function Sidebar() {
 
     return (
         <aside
-            className={`bg-white border-r border-gray-200 flex flex-col transition-all duration-300 ${isExpanded ? "w-64" : "w-16"
+            className={`bg-white border-r border-gray-200 flex flex-col transition-all duration-300 shrink-0 ${isExpanded ? "w-64" : "w-16"
                 }`}
         >
-            {/* Header / Toggle Section */}
-            <div className="p-4 border-b border-gray-200">
-                <div className="flex items-center justify-between">
-                    {isExpanded && (
-                        <Link href="/" className="overflow-hidden">
-                            <h1 className="text-xl font-extrabold text-blue-900 whitespace-nowrap">
-                                Engine Auto Mobile
-                            </h1>
-                        </Link>
-                    )}
-
-                    <button
-                        onClick={toggleSidebar}
-                        className="p-1 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
-                        title={isExpanded ? "Collapse Sidebar" : "Expand Sidebar"}
-                    >
-                        <FaBars   
-                            size={24}
-                            style={{
-                                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
-                                transition: "transform 0.3s ease",
-                            }}
-                        />
-                    </button>
-                </div>
-
-                {isExpanded && (
-                    <p className="text-slate-600 text-xs mt-2 whitespace-nowrap">
-                        Engine -- Lecture Notes.
-                    </p>
-                )}
-            </div>
-
-            {/* Navigation Links */}
-            <nav className="flex-1 p-2 space-y-2 overflow-x-hidden">
+            <nav className="flex-1 p-2 space-y-2 overflow-x-hidden pt-4">
                 <ul className="space-y-2">
                     {navItems.map((item) => (
                         <li key={item.href}>
