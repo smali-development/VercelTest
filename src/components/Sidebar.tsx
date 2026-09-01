@@ -8,10 +8,10 @@ import { PiEngineBold } from "react-icons/pi";
 import { GiClaymoreExplosive } from "react-icons/gi";
 
 interface SidebarProps {
-    isExpanded: boolean;
+    isSidebarExpanded: boolean;
 }
 
-export default function Sidebar({ isExpanded }: SidebarProps) {
+export default function Sidebar({ isSidebarExpanded: IsSidebarExpanded }: SidebarProps) {
     const navItems = [
         { href: "/Chapter1_Tool_Trolley", label: "Ch.1 Tool Trolley (8 tool boxes)", icon: <BsTools size={20} /> },
         { href: "/Chapter2_Fire_Triangle", label: "Ch.2 Fire Triangle", icon: <BsFire size={20} /> },
@@ -23,7 +23,7 @@ export default function Sidebar({ isExpanded }: SidebarProps) {
 
     return (
         <aside
-            className={`bg-white border-r border-gray-200 flex flex-col transition-all duration-300 shrink-0 ${isExpanded ? "w-64" : "w-16"
+            className={`bg-white border-r border-gray-200 flex flex-col transition-all duration-300 shrink-0 ${IsSidebarExpanded ? "w-64" : "w-16"
                 }`}
         >
             <nav className="flex-1 p-2 space-y-2 overflow-x-hidden pt-4">
@@ -32,12 +32,12 @@ export default function Sidebar({ isExpanded }: SidebarProps) {
                         <li key={item.href}>
                             <Link
                                 href={item.href}
-                                className={`flex items-center gap-3 p-2 rounded-md hover:bg-gray-100 transition-colors ${isExpanded ? "justify-start" : "justify-center"
+                                className={`flex items-center gap-3 p-2 rounded-md hover:bg-gray-100 transition-colors ${IsSidebarExpanded ? "justify-start" : "justify-center"
                                     }`}
-                                title={!isExpanded ? item.label : undefined}
+                                title={!IsSidebarExpanded ? item.label : undefined}
                             >
                                 <span className="shrink-0">{item.icon}</span>
-                                {isExpanded && (
+                                {IsSidebarExpanded && (
                                     <span className="whitespace-nowrap text-sm font-medium">
                                         {item.label}
                                     </span>

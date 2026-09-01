@@ -4,33 +4,29 @@ import { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-export default function LayoutWrapper({
+
+
+
+
+export default function PageHeader({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    const [isHeaderExpanded, setIsHeaderExpanded] = useState(true);
-    const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+    const [IsSidebarExpanded, setIsExpanded] = useState(false);
 
-     const toggleHeader = () => {
-        setIsHeaderExpanded((prev) => !prev);
-    };
     const toggleSidebar = () => {
-        setIsSidebarExpanded((prev) => !prev);
+        setIsExpanded((prev) => !prev);
     };
 
     return (
         <>
             {/* Top Header spanning full width */}
-            <Header 
-            toggleHeader={toggleHeader} 
-            isHeaderExpanded={isHeaderExpanded} 
-            toggleSidebar={toggleSidebar} 
-            isSidebarExpanded={isSidebarExpanded} />
+            <Header toggleSidebar={toggleSidebar} isSidebarExpanded={IsSidebarExpanded} />
 
             {/* Main Container below Header */}
             <div className="flex flex-1 overflow-hidden">
-                <Sidebar isSidebarExpanded={isSidebarExpanded} />
+                <Sidebar isSidebarExpanded={IsSidebarExpanded} />
 
                 <main className="flex-1 p-4 md:p-8 overflow-y-auto min-w-0">
                     <div className="mx-auto bg-white p-6 rounded-xl shadow-sm border border-gray-100">
