@@ -2,6 +2,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import { BsFire, BsTools } from "react-icons/bs";
+import { LiaTemperatureHighSolid } from "react-icons/lia";
+import { FaArrowRightToBracket, FaTemperatureHigh } from "react-icons/fa6";
+import { SlEnergy } from "react-icons/sl";
+import { PiEngineBold } from "react-icons/pi";
+import { GiClaymoreExplosive } from "react-icons/gi";
 
 export const metadata: Metadata = {
   title: "Next.js Sidebar Website",
@@ -20,9 +26,17 @@ export default function RootLayout({
         {/* Sidebar Container */}
         <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
           <div>
-            <Link href={"/"}>
-              <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Automobile (vehicle) technology</h1>
-            </Link>
+            <div className="flex items-center gap-2 p-4 border-b border-gray-200 justify-between">
+              
+              <Link href={"/"}>
+                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">
+
+                  <span className="text-blue-900">Engine Auto Mobile</span>
+                </h1>
+              </Link>
+              <FaArrowRightToBracket size={35}  style={{ transform: 'rotate(180deg)' }} />
+
+            </div>
             <p className="text-slate-600 mb-8">Engine -- Lecture Notes.</p>
           </div>
 
@@ -30,36 +44,53 @@ export default function RootLayout({
           <nav className="flex-1 p-4 space-y-2">
             <ul>
               <li>
-                <Link href={"/Chapter1_Tool_Trolley"}
-                rel="noopener"
-                className="pill-link whitespace-nowrap">Ch.1 Tool Trolley (8 tool boxes)
+                <Link
+                  href={"/Chapter1_Tool_Trolley"}
+                  rel="noopener"
+                  className="whitespace-nowrap inline-flex items-center gap-2"
+                >
+                  <BsTools />
+                  <span>Ch.1 Tool Trolley (8 tool boxes)</span>
                 </Link>
               </li>
               <li>
                 <Link href={"/Chapter2_Fire_Triangle"}
                   rel="noopener"
-                  className="pill-link whitespace-nowrap">Ch.2 Fire Triangle</Link>
+                  className="whitespace-nowrap inline-flex items-center gap-2">
+                  <BsFire />
+                  <span>Ch.2 Fire Triangle</span>
+                </Link>
               </li>
               <li>
                 <Link href={"/Chapter3_Points"}
                   rel="noopener"
-                  className="pill-link whitespace-nowrap">Ch.3 Points
+                  className="whitespace-nowrap inline-flex items-center gap-2">
+                  <FaTemperatureHigh />
+                  <span>Ch.3 Points</span>
                 </Link>
               </li>
               <li>
-                <Link href={"/Chapter4_Energy"} rel="noopener" className="pill-link whitespace-nowrap">Ch.4 Energy types
+                <Link href={"/Chapter4_Energy"} rel="noopener" className="whitespace-nowrap inline-flex items-center gap-2">
+                  <SlEnergy />
+                  <span>Ch.4 Energy types</span>
                 </Link>
               </li>
               <li>
-                <Link href={"/Chapter5_Engine_Types"}                rel="noopener"
-                className="pill-link whitespace-nowrap">Ch.5 Engine Types</Link>
+                <Link href={"/Chapter5_Engine_Types"} rel="noopener"
+                  className="whitespace-nowrap inline-flex items-center gap-2">
+                  <PiEngineBold />
+                  <span>Ch.5 Engine Types</span>
+                </Link>
               </li>
               <li>
                 <Link href={"/Chapter6_Engine_Base_System"}
-                rel="noopener"
-                className="pill-link whitespace-nowrap">Ch.6 Engine Base System</Link>
+                  rel="noopener"
+                  className="whitespace-nowrap inline-flex items-center gap-2">
+                  <GiClaymoreExplosive />
+                  <span>Ch.6 Engine Base System</span>
+                </Link>
               </li>
-            
+
             </ul>
           </nav>
         </aside>

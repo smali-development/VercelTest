@@ -6,8 +6,7 @@ export default function HomePage() {
         Welcome to the Home Page
       </h2>
       <p className="text-gray-600 leading-relaxed">
-        This is the main dashboard landing view. Notice how navigating to the 
-        About page via the sidebar is instantaneous and doesn't trigger a heavy page refresh.
+        Here we will see Auto mobile topics .
       </p>
     </div>
   );
