@@ -62,9 +62,11 @@ export default function CardShadcn3BunchDiv_CardName({ cardName }: CardShadcn3Bu
                     <CardShadcn key={index} imagePath={imagePath} />
                 ))}
             </div> */}
-            <div className="flex gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory">
+            <div className="grid grid-cols-3 gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory">
                 {images.map((imagePath, index) => (
-                    <div key={index} className="flex-shrink-0 snap-start w-64 md:w-72">
+                    <div key={index} 
+                    // className="flex-shrink-0 snap-start size:72px "
+                    >
                         <CardShadcn imagePath={imagePath} />
                     </div>
                 ))}
