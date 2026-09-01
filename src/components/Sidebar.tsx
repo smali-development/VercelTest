@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BsFire, BsTools } from "react-icons/bs";
-import { FaArrowRightToBracket, FaTemperatureHigh } from "react-icons/fa6";
+import { FaArrowRightToBracket, FaBars, FaTemperatureHigh } from "react-icons/fa6";
 import { SlEnergy } from "react-icons/sl";
 import { PiEngineBold } from "react-icons/pi";
 import { GiClaymoreExplosive } from "react-icons/gi";
@@ -47,7 +47,7 @@ export default function Sidebar() {
                         className="p-1 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
                         title={isExpanded ? "Collapse Sidebar" : "Expand Sidebar"}
                     >
-                        <MdDoubleArrow   
+                        <FaBars   
                             size={24}
                             style={{
                                 transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
