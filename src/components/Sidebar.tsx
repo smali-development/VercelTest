@@ -7,6 +7,7 @@ import { FaArrowRightToBracket, FaTemperatureHigh } from "react-icons/fa6";
 import { SlEnergy } from "react-icons/sl";
 import { PiEngineBold } from "react-icons/pi";
 import { GiClaymoreExplosive } from "react-icons/gi";
+import { MdDoubleArrow } from "react-icons/md";
 
 export default function Sidebar() {
     // Collapsed by default (collapsed = width 16 / w-16, expanded = width 64 / w-64)
@@ -46,7 +47,7 @@ export default function Sidebar() {
                         className="p-1 rounded-md hover:bg-gray-100 transition-colors focus:outline-none"
                         title={isExpanded ? "Collapse Sidebar" : "Expand Sidebar"}
                     >
-                        <FaArrowRightToBracket
+                        <MdDoubleArrow   
                             size={24}
                             style={{
                                 transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
