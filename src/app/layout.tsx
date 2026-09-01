@@ -20,7 +20,9 @@ export default function RootLayout({
         {/* Sidebar Container */}
         <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
           <div>
-            <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Automobile (vehicle) technology</h1>
+            <Link href={"/"}>
+              <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Automobile (vehicle) technology</h1>
+            </Link>
             <p className="text-slate-600 mb-8">Engine -- Lecture Notes.</p>
           </div>
 
