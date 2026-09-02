@@ -31,8 +31,8 @@ export default function LayoutWrapper({
 
             {/* Main Container below Header */}
             <div className="flex flex-1 overflow-hidden">
-                {/* <Sidebar isSidebarExpanded={isSidebarExpanded} /> */}
-                <Sidebar_nested isSidebarExpanded={isSidebarExpanded} />
+                <Sidebar isSidebarExpanded={isSidebarExpanded} />
+                {/* <Sidebar_nested isSidebarExpanded={isSidebarExpanded} /> */}
 
                 <main className="flex-1 p-4 md:p-8 overflow-y-auto min-w-0">
                     <div className="mx-auto bg-white p-6 rounded-xl shadow-sm border border-gray-100">
