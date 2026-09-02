@@ -22,7 +22,7 @@ const Chapter1_Tool_Trolley = async () => {
                 </ol>
             </div>
             {/* <li>1. Torque Wrench</li> */}
-            
+
             {/* <CardShadcn3BunchDiv
                 cardName="1. Torque Wrench"
                 viewImagesLink="https://www.bing.com/images/search?q=torque%20wrench%20tool"
@@ -35,28 +35,27 @@ const Chapter1_Tool_Trolley = async () => {
             /> */}
             <CardShadcn3BunchDiv_CardName cardName="Torque Wrench" />
 
-
             {/* <li>2. T-Handle Wrench</li> */}
             <CardShadcn3BunchDiv_CardName cardName="T-Handle Wrench" />
-            
+
             {/* <li>3. T-Handle Socket Wrench</li> */}
             <CardShadcn3BunchDiv_CardName cardName="T-Handle Socket Wrench" />
-            
+
             {/* <li>4. Phillips Screwdriver</li> */}
             <CardShadcn3BunchDiv_CardName cardName="Phillips Screwdriver" />
-            
+
             {/* <li>5. Flat Head Screwdriver</li> */}
-           <CardShadcn3BunchDiv_CardName cardName="Flat Head Screwdriver" />
-           
+            <CardShadcn3BunchDiv_CardName cardName="Flat Head Screwdriver" />
+
             {/* <li>6. Tyre Lever</li> */}
             <CardShadcn3BunchDiv_CardName cardName=" Tyre Lever" />
-            
+
             {/* <li>7. Two-Jaw Puller</li> */}
             <CardShadcn3BunchDiv_CardName cardName="Two-Jaw Puller" />
-            
+
             {/* <li>8. Three-Jaw Puller</li> */}
             <CardShadcn3BunchDiv_CardName cardName="Three-Jaw Puller" />
-            
+
             <div>
                 <p><strong>Box No. 2</strong></p>
                 <ol>

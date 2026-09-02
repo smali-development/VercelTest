@@ -1,275 +1,60 @@
-import Image from "next/image";
+// src/app/Chapter1_Tool_Trolley/Box1/page.tsx
 
-const box1 = async () => {
+import Link from "next/link";
+import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
+import CollapsibleCards from "@/components/CollapsibleCards";
+
+export default function Box1Page() {
+    const tools = [
+        { name: "Torque Wrench", slug: "Torque_Wrench" },
+        { name: "T-Handle Wrench", slug: "T_Handle_Wrench" },
+        { name: "T-Handle Socket Wrench", slug: "T_Handle_Socket_Wrench" },
+        { name: "Phillips Screwdriver", slug: "Phillips_Screwdriver" },
+        { name: "Flat Head Screwdriver", slug: "Flat_Head_Screwdriver" },
+        { name: "Tyre Lever", slug: "Tyre_Lever" },
+        { name: "Two-Jaw Puller", slug: "Two_Jaw_Puller" },
+        { name: "Three-Jaw Puller", slug: "Three_Jaw_Puller" },
+    ];
+
+    const basePath = "/Chapter1_Tool_Trolley/Box1";
+
     return (
-        <div>
+        <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
             <div>
-                <p><strong>Box No. 1</strong></p>
-                <ol>
-                    <li>1. Torque Wrench</li>
-                    <li>2. T-Handle Wrench</li>
-                    <li>3. T-Handle Socket Wrench</li>
-                    <li>4. Phillips Screwdriver</li>
-                    <li>5. Flat Head Screwdriver</li>
-                    <li>6. Tyre Lever</li>
-                    <li>7. Two-Jaw Puller</li>
-                    <li>8. Three-Jaw Puller</li>
+                <h1 className="text-3xl font-extrabold mb-2 text-blue-900">
+                    Chapter 1 — Tool Trolley
+                </h1>
+                <p className="text-slate-600 mb-8">
+                    The tool trolley is organised into 8 numbered boxes, each holding a
+                    specific group of hand tools used in engine workshop practice.
+                </p>
+            </div>
+
+            <div>
+                <h2 className="section-heading text-xl font-bold mb-4">Box No. 1</h2>
+                <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
+                    {tools.map((tool) => (
+                        <li key={tool.slug}>
+                            <Link
+                                href={`${basePath}/${tool.slug}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                            >
+                                {tool.name}
+                            </Link>
+                        </li>
+                    ))}
                 </ol>
             </div>
-            <div>
-                <h2>Names with real pictures:</h2>
-            </div>
-            {/* 1. Torque Wrench */}
-            <div>
-                <p><strong>1. Torque Wrench</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/TORQUE_WRENCH_1.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
 
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/TORQUE_WRENCH_2.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/TORQUE_WRENCH_3.webp"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 2. T-Handle Wrench */}
-            <div>
-                <p><strong>2. T-Handle Wrench</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Wrench1.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Wrench2.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Wrench3.avit"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 3. T-Handle Socket Wrench */}
-            <div>
-                <p><strong>3. T-Handle Socket Wrench</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Socket Wrench1.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Socket Wrench2.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/T-Handle Socket Wrench3.avit"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 4. Phillips Screwdriver */}
-            <div>
-                <p><strong>3. T-Handle Socket Wrench</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Phillips Screwdriver1.webp"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Phillips Screwdriver2.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Phillips Screwdriver3.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 5. Flat Head Screwdriver */}
-            <div>
-                <p><strong>3. T-Handle Socket Wrench</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Flat Head Screwdriver1.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                            
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Flat Head Screwdriver2.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Flat Head Screwdriver3.webp"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 6. Tyre Lever */}
-            <div>
-                <p><strong>6. Tyre Lever</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Tyre Lever1.avif"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Tyre Lever2.avif"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Tyre Lever3.webp"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 7. Two-Jaw Puller */}
-            <div>
-                <p><strong>7. Two-Jaw Puller</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Two-Jaw Puller1.avif"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Two-Jaw Puller2.webp"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Two-Jaw Puller3.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
-            {/* 8. Three-Jaw Puller */}
-            <div>
-                <p><strong>8. Three-Jaw Puller</strong></p>
-                <div className="grid grid-cols-3 gap-8">
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Three-Jaw Puller1.avif"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/TThree-Jaw Puller2.webp.crdownload"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                    <div className="bg-red-300 border border-red-700">
-                        <Image
-                            src="/images/Three-Jaw Puller3.jpg"
-                            alt="Torque Wrench"
-                            width={300}
-                            height={300}
-                            className="object-contain w-full h-full" />
-                    </div>
-                </div>
-            </div>
+            {/* Images / Cards Partition (Deferred Loading) */}
+            <CollapsibleCards title="View Tool Cards & Images">
+                {tools.map((tool, index) => (
+                    <CardShadcn3BunchDiv_CardName
+                        key={tool.name || index}
+                        cardName={tool.name}
+                    />
+                ))}
+            </CollapsibleCards>
         </div>
     );
-};
-
-export default box1;
+}

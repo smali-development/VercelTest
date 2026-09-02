@@ -19,7 +19,6 @@ export default function CardShadcn3BunchDiv_CardName({
 
         async function loadImages() {
             try {
-                // اب صرف 1 ریکویسٹ جائے گی جو کیش سے امیجز لائے گی
                 const res = await fetch(`/api/images?name=${encodeURIComponent(cardName)}`);
                 const data = await res.json();
                 if (!cancelled && data.images) {
@@ -45,6 +44,7 @@ export default function CardShadcn3BunchDiv_CardName({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pill-link whitespace-nowrap"
+                    onClick={(e) => e.stopPropagation()}
                 >
                     View pictures ↗
                 </a>
