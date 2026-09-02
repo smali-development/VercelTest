@@ -23,7 +23,7 @@ const Chapter1_Tool_Trolley = async () => {
             </div>
             {/* <li>1. Torque Wrench</li> */}
             
-            <CardShadcn3BunchDiv
+            {/* <CardShadcn3BunchDiv
                 cardName="1. Torque Wrench"
                 viewImagesLink="https://www.bing.com/images/search?q=torque%20wrench%20tool"
                 images={[
@@ -32,77 +32,31 @@ const Chapter1_Tool_Trolley = async () => {
                     "/images/TORQUE_WRENCH_2.jpg",
                     "/images/TORQUE_WRENCH_3.webp",
                 ]}
-            />
+            /> */}
+            <CardShadcn3BunchDiv_CardName cardName="Torque Wrench" />
+
+
             {/* <li>2. T-Handle Wrench</li> */}
-            <CardShadcn3BunchDiv
-                cardName="2. T-Handle Wrench"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/T-Handle Wrench1.jpg",
-                    "/images/T-Handle Wrench2.jpg",
-                    "/images/T-Handle Wrench3.avif",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName="T-Handle Wrench" />
+            
             {/* <li>3. T-Handle Socket Wrench</li> */}
-            <CardShadcn3BunchDiv
-                cardName="3. T-Handle Socket Wrench"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/T-Handle Socket Wrench1.jpg",
-                    "/images/T-Handle Socket Wrench1.jpg",
-                    "/images/T-Handle Socket Wrench1.webp",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName="T-Handle Socket Wrench" />
+            
             {/* <li>4. Phillips Screwdriver</li> */}
-            <CardShadcn3BunchDiv
-                cardName="4. Phillips Screwdriver"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/Phillips Screwdriver1.webp",
-                    "/images/Phillips Screwdriver2.jpg",
-                    "/images/Phillips Screwdriver3.jpg",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName="Phillips Screwdriver" />
+            
             {/* <li>5. Flat Head Screwdriver</li> */}
-            <CardShadcn3BunchDiv
-                cardName="5. Flat Head Screwdriver"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/Flat Head Screwdriver1.jpg",
-                    "/images/Flat Head Screwdriver2.jpg",
-                    "/images/Flat Head Screwdriver3.webp",
-                ]}
-            />
+           <CardShadcn3BunchDiv_CardName cardName="Flat Head Screwdriver" />
+           
             {/* <li>6. Tyre Lever</li> */}
-            <CardShadcn3BunchDiv
-                cardName="6. Tyre Lever"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/Tyre Lever1.avif",
-                    "/images/Tyre Lever2.avif",
-                    "/images/Tyre Lever3.webp",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName=" Tyre Lever" />
+            
             {/* <li>7. Two-Jaw Puller</li> */}
-            <CardShadcn3BunchDiv
-                cardName="7. Two-Jaw Puller"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/Two-Jaw Puller1.jpg",
-                    "/images/Two-Jaw Puller2.webp",
-                    "/images/Two-Jaw Puller3.jpg",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName="Two-Jaw Puller" />
+            
             {/* <li>8. Three-Jaw Puller</li> */}
-            <CardShadcn3BunchDiv
-                cardName="7. Two-Jaw Puller"
-                viewImagesLink="https://www.bing.com/images/search?q=T-Handle%20wrench%20tool"
-                images={[
-                    "/images/Three-Jaw Puller1.jpg",
-                    "/images/Three-Jaw Puller2.webp",
-                    "/images/Three-Jaw Puller3.jpg",
-                ]}
-            />
+            <CardShadcn3BunchDiv_CardName cardName="Three-Jaw Puller" />
+            
             <div>
                 <p><strong>Box No. 2</strong></p>
                 <ol>
