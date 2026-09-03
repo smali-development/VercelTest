@@ -1,22 +1,20 @@
-// src/app/Chapter1_Tool_Trolley/Box1/page.tsx
+
+// src/app/Chapter1_Tool_Trolley/box3/page.tsx
 
 import Link from "next/link";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
 import CollapsibleCards from "@/components/CollapsibleCards";
 
-export default function Box1() {
+export default function Box3() {
     const tools = [
-        { name: "Torque Wrench", slug: "Torque_Wrench" },
-        { name: "T-Handle Wrench", slug: "T_Handle_Wrench" },
-        { name: "T-Handle Socket Wrench", slug: "T_Handle_Socket_Wrench" },
-        { name: "Phillips Screwdriver", slug: "Phillips_Screwdriver" },
-        { name: "Flat Head Screwdriver", slug: "Flat_Head_Screwdriver" },
-        { name: "Tyre Lever", slug: "Tyre_Lever" },
-        { name: "Two-Jaw Puller", slug: "Two_Jaw_Puller" },
-        { name: "Three-Jaw Puller", slug: "Three_Jaw_Puller" },
+        { name: "Combination Spanner", slug: "Combination_Spanner" },
+        { name: "Ring Spanner", slug: "Ring_Spanner" },
+        { name: "Box End Spanner", slug: "Box_End_Spanner" },
+        { name: "Open End Spanner", slug: "Open_End_Spanner" },
+        { name: "Adjustable (Dock) Spanner", slug: "Adjustable_Dock_Spanner" },
     ];
 
-    const basePath = "/Chapter1_Tool_Trolley/Box1";
+    const basePath = "/Chapter1_Tool_Trolley/box3";
 
     return (
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
@@ -31,7 +29,7 @@ export default function Box1() {
             </div>
 
             <div>
-                <h2 className="section-heading text-xl font-bold mb-4">Box No. 1</h2>
+                <h2 className="section-heading text-xl font-bold mb-4">Box No. 3</h2>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
                     {tools.map((tool) => (
                         <li key={tool.slug}>
@@ -48,9 +46,9 @@ export default function Box1() {
 
             {/* Images / Cards Partition (Deferred Loading) */}
             <CollapsibleCards title="View Tool Cards & Images">
-                {tools.map((tool, index) => (
+                {tools.map((tool) => (
                     <CardShadcn3BunchDiv_CardName
-                        key={tool.name || index}
+                        key={tool.slug}
                         cardName={tool.name}
                     />
                 ))}
