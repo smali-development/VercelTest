@@ -205,6 +205,7 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
             label: "Ch.6 Engine Base System",
             icon: <GiClaymoreExplosive size={20} />,
             children: [
+                // 1. Engine Proper System
                 {
                     href: "/Chapter6_Engine_Base_System/Engine_Proper_System", label: "1. Engine Proper System",
                     children: [
@@ -306,20 +307,8 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                             ],
                         },
                         {
-                            href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Crank_Shaft_Parts", label: "4. Crank Shaft",
-                            children: [
-                                { href: "?", label: "1. Piston Connecting Rod" },
-                                { href: "?", label: "2. Main Bearing" },
-                                { href: "?", label: "3. Piston" },
-                                { href: "?", label: "4. Cam Shaft" },
-                                { href: "?", label: "5. Flywheel" },
-                                { href: "?", label: "6. Crank Shaft Pulley" },
-                                { href: "?", label: "7. Counter Weights" },
-                                { href: "?", label: "8. Crank Pins" },
-                                { href: "?", label: "9. Thrust Bearing" },
-                                { href: "?", label: "10. Oil Pump" },
-                                { href: "?", label: "11. Timing Chain and Timing Belt" },
-                            ],
+                            href: "?", label: "4. Crank Shaft"
+                            
                         },
                         { href: "?", label: "5. Fly Wheel" },
                         { href: "?", label: "6. Valve Mechanism & Timing" },
@@ -337,12 +326,37 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                     ],
 
                 },
+                // 2. Intake System
                 {
                     href: "/Chapter6_Engine_Base_System/Intake_System", label: "2. Intake System",
                     children: [
-                        { href: "?", label: "1. Forced Induction System - Diesel Engine" },
-                        { href: "?", label: "2. Air Cleaner" },
-                        { href: "?", label: "3. Throttle Body" },
+                        {
+                            href: "/Chapter6_Engine_Base_System/Intake_System/Forced_Induction_System_Diesel_Engine", label: "1. Forced Induction System - Diesel Engine",
+                            children: [
+                                { href: "?", label: "1. Turbocharger" },
+                                { href: "?", label: "2. Supercharger" },
+                                { href: "?", label: "3. Compound Charging" },
+                                { href: "?", label: "4. Ram-Air Intake" },
+                                {
+                                    href: "/Chapter6_Engine_Base_System/Intake_System/Forced_Induction_System_Diesel_Engine/Forced_Induction_System_Parts", label: "5. Forced Induction System Parts",
+                                    children: [
+                                        { href: "?", label: "1. Exhaust Manifold" },
+                                        { href: "?", label: "2. Turbine Wheel" },
+                                        { href: "?", label: "3. Compressor Wheel" },
+                                        { href: "?", label: "4. Wastegate" },
+                                        { href: "?", label: "5. Inter Cooler" },
+                                        { href: "?", label: "6. Blow-off Valve" },
+                                        { href: "?", label: "7. Belt Drive Pulley" },
+                                        { href: "?", label: "8. Compressor Housing" },
+                                        { href: "?", label: "9. Rotor Assembly" },
+                                        { href: "?", label: "10. Boost Controller" },
+                                    ],
+                                },
+                            ],
+                        },
+                        { href: "/Chapter6_Engine_Base_System/Intake_System/Air_Cleaner", label: "2. Air Cleaner" },
+                                
+                        { href: "/Chapter6_Engine_Base_System/Intake_System/Throttle_Body", label: "3. Throttle Body" },
                         { href: "?", label: "4. Intake Manifold" },
                     ],
                 },
