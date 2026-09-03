@@ -1,14 +1,15 @@
 import CollapsibleSection from "@/components/CollapsibleSection";
 
 // 1. Import the actual child page components directly
-import Box1 from "./Box1/page";
-import Box2 from "./Box2/page";
-import Box3 from "./Box3/page";
-import Box4 from "./Box4/page";
-import Box5 from "./Box5/page";
-import Box6 from "./Box6/page";
-import Box7 from "./Box7/page";
-import Box8 from "./Box8/page";
+
+import Box1 from "./box1/page";
+import Box2 from "./box2/page";
+import Box3 from "./box3/page";
+import Box4 from "./box4/page";
+import Box5 from "./box5/page";
+import Box6 from "./box6/page";
+import Box7 from "./box7/page";
+import Box8 from "./box8/page";
 // Import Box 2, Box 3, etc. when created:
 // import Box2Page from "./Box2/page";
 
