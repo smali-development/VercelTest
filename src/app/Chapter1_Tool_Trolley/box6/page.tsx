@@ -19,16 +19,8 @@ export default function Box6() {
     const basePath = "/Chapter1_Tool_Trolley/box6";
 
     return (
-        <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
-            <div>
-                <h1 className="text-3xl font-extrabold mb-2 text-blue-900">
-                    Chapter 1 — Tool Trolley
-                </h1>
-                <p className="text-slate-600 mb-8">
-                    The tool trolley is organised into 8 numbered boxes, each holding a
-                    specific group of hand tools used in engine workshop practice.
-                </p>
-            </div>
+        <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
+           
 
             <div>
                 <h2 className="section-heading text-xl font-bold mb-4">Box No. 6</h2>
