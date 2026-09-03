@@ -209,6 +209,7 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                 {
                     href: "/Chapter6_Engine_Base_System/Engine_Proper_System", label: "1. Engine Proper System",
                     children: [
+                        // 1. Cylinder Head
                         {
                             href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Cylinder_Head_Parts", label: "1. Cylinder Head",
                             children: [
@@ -246,6 +247,7 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                                 { href: "?", label: "32. High Tension Wire" },
                             ],
                         },
+                        // 2. Cylinder Block
                         {
                             href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Cylinder_Block_Parts", label: "2. Cylinder Block",
                             children: [
@@ -281,6 +283,7 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                                 { href: "?", label: "30. Alternator" },
                             ],
                         },
+                        // 3. Piston
                         {
                             href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Piston_Parts", label: "3. Piston",
                             children: [
@@ -306,12 +309,27 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                                 { href: "?", label: "20. Plunger" },
                             ],
                         },
+                        // 4. Crank Shaft
                         {
-                            href: "?", label: "4. Crank Shaft"
-                            
+                            href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Crankshaft_Parts", label: "4. Crank Shaft",
+                            children: [
+                                { href: "?", label: "1. Piston Connecting Rod" },
+                                { href: "?", label: "2. Main Bearing" },
+                                { href: "?", label: "3. Piston" },
+                                { href: "?", label: "4. Cam Shaft" },
+                                { href: "?", label: "5. Flywheel" },
+                                { href: "?", label: "6. Crank Shaft Pulley" },
+                                { href: "?", label: "7. Counter Weights" },
+                                { href: "?", label: "8. Crank Pins" },
+                                { href: "?", label: "9. Thrust Bearing" },
+                                { href: "?", label: "10. Oil Pump" },
+                                { href: "?", label: "11. Timing Chain and Timing Belt" },
+                            ],
+
                         },
                         { href: "?", label: "5. Fly Wheel" },
                         { href: "?", label: "6. Valve Mechanism & Timing" },
+                        // 7. Drive Belt
                         {
                             href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Drive_Belt_Type", label: "7. Drive Belt",
                             children: [
@@ -322,7 +340,14 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                                 { href: "?", label: "5. V-Ribbed Belt" },
                             ],
                         },
-                        { href: "?", label: "8. Oil Pan" },
+                        // 8. Oil Pan
+                        {
+                            href: "/Chapter6_Engine_Base_System/Engine_Proper_System/Oil_Pan", label: "8. Oil Pan",
+                            children: [
+                                { href: "?", label: "1. Oil Pan Without Partition" },
+                                { href: "?", label: "2. Oil Pan With Partition" },
+                            ],
+                        },
                     ],
 
                 },
@@ -355,7 +380,7 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                             ],
                         },
                         { href: "/Chapter6_Engine_Base_System/Intake_System/Air_Cleaner", label: "2. Air Cleaner" },
-                                
+
                         { href: "/Chapter6_Engine_Base_System/Intake_System/Throttle_Body", label: "3. Throttle Body" },
                         { href: "?", label: "4. Intake Manifold" },
                     ],
