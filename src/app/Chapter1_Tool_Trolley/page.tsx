@@ -42,7 +42,6 @@ export default async function ToolTrolleyOverviewPage() {
                 <Box3 />
             </CollapsibleSection>
 
-
             {/* Render Box 4 page content */}
             <CollapsibleSection title="Box 4">
                 <Box4 />
