@@ -38,16 +38,14 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                     href: "/Chapter1_Tool_Trolley/Box1",
                     label: "Box 1",
                     children: [
-                        {
-                            href: "/Chapter1_Tool_Trolley/Box1/Torque_Wrench",
-                            label: "1. Torque Wrench",
-                            children: [
-                                { href: "/Chapter1_Tool_Trolley/Box1/Torque_Wrench/Parts", label: "Parts" },
-                                { href: "/Chapter1_Tool_Trolley/Box1/Torque_Wrench/Description", label: "Description" },
-                                { href: "/Chapter1_Tool_Trolley/Box1/Torque_Wrench/Maintenance", label: "Maintenance" },
-                            ],
-                        },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Torque_Wrench", label: "1. Torque Wrench" },
                         { href: "/Chapter1_Tool_Trolley/Box1/T_Handle_Wrench", label: "2. T-Handle Wrench" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/T_Handle_Socket_Wrench", label: "3. T-Handle Socket Wrench" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Phillips_Screwdriver", label: "4. Phillips Screwdriver" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Flat_Head_Screwdriver", label: "5. Flat Head Screwdriver" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Tyre_Lever", label: "6. Tyre Lever" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Two_Jaw_Puller", label: "7. Two-Jaw Puller" },
+                        { href: "/Chapter1_Tool_Trolley/Box1/Three_Jaw_Puller", label: "8. Three-Jaw Puller" },
                     ],
                 },
                 {
@@ -55,6 +53,92 @@ export default function Sidebar({ isSidebarExpanded }: SidebarProps) {
                     label: "Box 2",
                     children: [
                         { href: "/Chapter1_Tool_Trolley/Box2/Piston_Ring_Expander", label: "1. Piston Ring Expander" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Grip_Pliers", label: "2. Grip Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Monkey_Pliers", label: "3. Monkey Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Slip_Joint_Pliers", label: "4. Slip Joint Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Combination_Pliers", label: "5. Combination Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Cutter_Nose_Pliers", label: "6. Cutter Nose Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Long_Nose_Pliers", label: "7. Long Nose Pliers" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Circlip_Pliers_Internal", label: "8. Circlip Pliers (Internal)" },
+                        { href: "/Chapter1_Tool_Trolley/Box2/Circlip_Pliers_External", label: "9. Circlip Pliers (External)" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box3",
+                    label: "Box 3",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box3/Combination_Spanner", label: "1. Combination Spanner" },
+                        { href: "/Chapter1_Tool_Trolley/Box3/Ring_Spanner", label: "2. Ring Spanner" },
+                        { href: "/Chapter1_Tool_Trolley/Box3/Box_End_Spanner", label: "3. Box End Spanner" },
+                        { href: "/Chapter1_Tool_Trolley/Box3/Open_End_Spanner", label: "4. Open End Spanner" },
+                        { href: "/Chapter1_Tool_Trolley/Box3/Adjustable_Dock_Spanner", label: "5. Adjustable (Dock) Spanner" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box4",
+                    label: "Box 4",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box4/Speed_Handle", label: "1. Speed Handle" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Star_Allen_Key", label: "2. Star Allen Key" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Six_Point_Hex_Allen_Key", label: "3. Six-Point (Hex) Allen Key" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Feeler_Gauge", label: "4. Feeler Gauge" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Socket_Set", label: "5. Socket Set" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Deep_Socket", label: "6. Deep Socket" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Universal_Joint", label: "7. Universal Joint" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Ratchet_Handle", label: "8. Ratchet Handle" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Sliding_T_Handle", label: "9. Sliding T-Handle" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Half_Extension_Bar", label: "10. Half Extension Bar" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/Full_Extension_Bar", label: "11. Full Extension Bar" },
+                        { href: "/Chapter1_Tool_Trolley/Box4/L_Handle_Tommy_Bar", label: "12. L-Handle Tommy Bar" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box5",
+                    label: "Box 5",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box5/Wheel_Spanner", label: "1. Wheel Spanner" },
+                        { href: "/Chapter1_Tool_Trolley/Box5/Oil_Can", label: "2. Oil Can" },
+                        { href: "/Chapter1_Tool_Trolley/Box5/Chisel", label: "3. Chisel" },
+                        { href: "/Chapter1_Tool_Trolley/Box5/Oil_Filter_Wrench", label: "4. Oil Filter Wrench" },
+                        { href: "/Chapter1_Tool_Trolley/Box5/Center_Punch", label: "5. Center Punch" },
+                        { href: "/Chapter1_Tool_Trolley/Box5/Scraper", label: "6. Scraper" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box6",
+                    label: "Box 6",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box6/Hacksaw", label: "1. Hacksaw" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Nylon_Brush", label: "2. Nylon Brush" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Steel_Wire_Brush", label: "3. Steel Wire Brush" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Flat_File", label: "4. Flat File" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Triangular_File", label: "5. Triangular File" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Square_File", label: "6. Square File" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Round_File", label: "7. Round File" },
+                        { href: "/Chapter1_Tool_Trolley/Box6/Half_Round_File", label: "8. Half-Round File" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box7",
+                    label: "Box 7",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box7/Valve_Lifter", label: "1. Valve Lifter" },
+                        { href: "/Chapter1_Tool_Trolley/Box7/Valve_Lapper", label: "2. Valve Lapper" },
+                        { href: "/Chapter1_Tool_Trolley/Box7/Valve_Grinding_Paste", label: "3. Valve Grinding Paste" },
+                        { href: "/Chapter1_Tool_Trolley/Box7/Adjustable_Wrench", label: "4. Adjustable Wrench" },
+                        { href: "/Chapter1_Tool_Trolley/Box7/Pipe_Wrench", label: "5. Pipe Wrench" },
+                    ],
+                },
+                {
+                    href: "/Chapter1_Tool_Trolley/Box8",
+                    label: "Box 8",
+                    children: [
+                        { href: "/Chapter1_Tool_Trolley/Box8/Hammer", label: "1. Hammer" },
+                        { href: "/Chapter1_Tool_Trolley/Box8/Ball_Peen_Hammer", label: "2. Ball Peen Hammer" },
+                        { href: "/Chapter1_Tool_Trolley/Box8/Claw_Hammer", label: "3. Claw Hammer" },
+                        { href: "/Chapter1_Tool_Trolley/Box8/Rubber_Mallet", label: "4. Rubber Mallet" },
+                        { href: "/Chapter1_Tool_Trolley/Box8/Piston_Ring_Compressor", label: "5. Piston Ring Compressor" },
+                        { href: "/Chapter1_Tool_Trolley/Box8/Stud_Remover", label: "6. Stud Remover" },
                     ],
                 },
             ],
@@ -112,8 +196,8 @@ function SidebarItem({ node, pathname, isSidebarExpanded, level }: SidebarItemPr
         <li className="mb-0.5">
             <div
                 className={`flex items-center justify-between rounded-md p-1.5 transition-colors ${isActive
-                        ? "bg-blue-50 text-blue-600 font-semibold"
-                        : "text-gray-700 hover:bg-gray-100"
+                    ? "bg-blue-50 text-blue-600 font-semibold"
+                    : "text-gray-700 hover:bg-gray-100"
                     }`}
                 style={{
                     // جیسے جیسے لیول (Depth) بڑھے گا، خودکار انڈینٹیشن (Padding) بڑھتی جائے گی
