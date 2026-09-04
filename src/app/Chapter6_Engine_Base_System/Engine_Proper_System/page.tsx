@@ -1,14 +1,22 @@
-import CollapsibleSection from "@/components/CollapsibleSection";
-import Cylinder_Head_Parts from './Cylinder_Head_Parts/page';
-import Cylinder_Block_Parts from "./Cylinder_Block_Parts/page";
-import Piston_Parts from "./Piston_Parts/page";
-import Crankshaft_Parts from "./Crankshaft_Parts/page";
-import Drive_Belt_Type from "./Drive_Belt_Type/page";
-import Oil_Pan_Types from "./Oil_Pan/page";
-import Fly_Wheel from "./Fly_Wheel/page";
-import Valve_Mechanism_Timing from "./Valve_Mechanism_Timing/page";
+
+
+import Link from "next/link";
+import CollapsibleCards from "@/components/CollapsibleCards";
+import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
+import { removeLeadingNumber } from "@/utils/formatName";
 
 export default async function Engine_Proper_System() {
+    const elements = [
+        { name: "Cylinder Head", slug: "?" },
+        { name: "Cylinder Block", slug: "?" },
+        { name: "Piston", slug: "?" },
+        { name: "Crank Shaft", slug: "?" },
+        { name: "Fly Wheel", slug: "?" },
+        { name: "Valve Mechanism & Timing", slug: "?" },
+        { name: "Drive Belt", slug: "?" },
+        { name: "Oil Pan", slug: "?" },
+    ];
+    const basePath = "?";
     return (
         <div className="max-w-5xl mx-auto p-6 space-y-6">
             <div>
@@ -23,47 +31,31 @@ export default async function Engine_Proper_System() {
             <h1 className="text-2xl font-bold text-slate-900 mb-6">
                 Engine Proper System Overview
             </h1>
+            <div>
+                <h2 className="section-heading">Components</h2>
+                <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
+                    {elements.map((element) => (
+                        <li key={element.slug}>
+                            <Link
+                                href={`${basePath}/${element.slug}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                            >
+                                {element.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ol>
+            </div>
 
-            {/* Render Cylinder_Head page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Cylinder Head" defaultOpen={false}>
-                <Cylinder_Head_Parts />
-            </CollapsibleSection>
-
-            {/* Render Cylinder_Block page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Cylinder Block" defaultOpen={false}>
-                <Cylinder_Block_Parts />
-            </CollapsibleSection>
-
-            {/* Render Piston page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Piston" defaultOpen={false}>
-                <Piston_Parts />
-            </CollapsibleSection>
-
-            {/* Render Crank_Shaft page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Crank Shaft" defaultOpen={false}>
-                <Crankshaft_Parts />
-            </CollapsibleSection>
-
-            {/* Render Fly_Wheel page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Fly Wheel" defaultOpen={false}>
-                <Fly_Wheel />
-            </CollapsibleSection>
-
-            {/* Render Valve_Mechanism_Timing page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Valve Mechanism & Timing" defaultOpen={false}>
-                <Valve_Mechanism_Timing />
-            </CollapsibleSection>
-
-            {/* Render Drive_Belt page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Drive Belt" defaultOpen={false}>
-                <Drive_Belt_Type />
-            </CollapsibleSection>
-
-            {/* Render Oil_Pan page content inside a CollapsibleSection */}
-            <CollapsibleSection title="Oil Pan" defaultOpen={false}>
-                <Oil_Pan_Types />
-            </CollapsibleSection>
-
+            {/* Images / Cards Partition (Deferred Loading) */}
+            <CollapsibleCards title="View Tool Cards & Images">
+                {elements.map((element) => (
+                    <CardShadcn3BunchDiv_CardName
+                        key={element.slug}
+                        cardName={removeLeadingNumber(element.name)}
+                    />
+                ))}
+            </CollapsibleCards>
 
 
         </div>

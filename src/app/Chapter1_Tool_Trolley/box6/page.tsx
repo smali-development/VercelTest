@@ -5,18 +5,18 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box6() {
-    const tools = [
-        { name: "Hacksaw", slug: "Hacksaw" },
-        { name: "Nylon Brush", slug: "Nylon_Brush" },
-        { name: "Steel Wire Brush", slug: "Steel_Wire_Brush" },
-        { name: "Flat File", slug: "Flat_File" },
-        { name: "Triangular File", slug: "Triangular_File" },
-        { name: "Square File", slug: "Square_File" },
-        { name: "Round File", slug: "Round_File" },
-        { name: "Half-Round File", slug: "Half_Round_File" },
-    ];
+ const tools = [
+  { name: "Hacksaw", slug: "?" },
+  { name: "Nylon Brush", slug: "?" },
+  { name: "Steel Wire Brush", slug: "?" },
+  { name: "Flat File", slug: "?" },
+  { name: "Triangular File", slug: "?" },
+  { name: "Square File", slug: "?" },
+  { name: "Round File", slug: "?" },
+  { name: "Half-Round File", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box6";
+const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

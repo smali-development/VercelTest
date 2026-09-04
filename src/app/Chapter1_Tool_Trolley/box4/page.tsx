@@ -5,22 +5,22 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box4() {
-    const tools = [
-        { name: "Speed Handle", slug: "Speed_Handle" },
-        { name: "Star Allen Key", slug: "Star_Allen_Key" },
-        { name: "Six-Point (Hex) Allen Key", slug: "Six_Point_Hex_Allen_Key" },
-        { name: "Feeler Gauge", slug: "Feeler_Gauge" },
-        { name: "Socket Set", slug: "Socket_Set" },
-        { name: "Deep Socket", slug: "Deep_Socket" },
-        { name: "Universal Joint", slug: "Universal_Joint" },
-        { name: "Ratchet Handle", slug: "Ratchet_Handle" },
-        { name: "Sliding T-Handle", slug: "Sliding_T_Handle" },
-        { name: "Half Extension Bar", slug: "Half_Extension_Bar" },
-        { name: "Full Extension Bar", slug: "Full_Extension_Bar" },
-        { name: "L-Handle Tommy Bar", slug: "L_Handle_Tommy_Bar" },
-    ];
+   const tools = [
+  { name: "Speed Handle", slug: "?" },
+  { name: "Star Allen Key", slug: "?" },
+  { name: "Six-Point (Hex) Allen Key", slug: "?" },
+  { name: "Feeler Gauge", slug: "?" },
+  { name: "Socket Set", slug: "?" },
+  { name: "Deep Socket", slug: "?" },
+  { name: "Universal Joint", slug: "?" },
+  { name: "Ratchet Handle", slug: "?" },
+  { name: "Sliding T-Handle", slug: "?" },
+  { name: "Half Extension Bar", slug: "?" },
+  { name: "Full Extension Bar", slug: "?" },
+  { name: "L-Handle Tommy Bar", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box4";
+const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

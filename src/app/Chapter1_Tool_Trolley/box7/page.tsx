@@ -5,16 +5,15 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box7() {
-    const tools = [
-        { name: "Valve Lifter", slug: "Valve_Lifter" },
-        { name: "Valve Lapper", slug: "Valve_Lapper" },
-        { name: "Valve Grinding Paste", slug: "Valve_Grinding_Paste" },
-        { name: "Adjustable Wrench", slug: "Adjustable_Wrench" },
-        { name: "Pipe Wrench", slug: "Pipe_Wrench" },
-    ];
+const tools = [
+  { name: "Valve Lifter", slug: "?" },
+  { name: "Valve Lapper", slug: "?" },
+  { name: "Valve Grinding Paste", slug: "?" },
+  { name: "Adjustable Wrench", slug: "?" },
+  { name: "Pipe Wrench", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box7";
-
+const basePath = "?";
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
 

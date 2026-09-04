@@ -5,16 +5,16 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box8() {
-    const tools = [
-        { name: "Hammer", slug: "Hammer" },
-        { name: "Ball Peen Hammer", slug: "Ball_Peen_Hammer" },
-        { name: "Claw Hammer", slug: "Claw_Hammer" },
-        { name: "Rubber Mallet", slug: "Rubber_Mallet" },
-        { name: "Piston Ring Compressor", slug: "Piston_Ring_Compressor" },
-        { name: "Stud Remover", slug: "Stud_Remover" },
-    ];
+const tools = [
+  { name: "Hammer", slug: "?" },
+  { name: "Ball Peen Hammer", slug: "?" },
+  { name: "Claw Hammer", slug: "?" },
+  { name: "Rubber Mallet", slug: "?" },
+  { name: "Piston Ring Compressor", slug: "?" },
+  { name: "Stud Remover", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box8";
+const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

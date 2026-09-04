@@ -14,7 +14,7 @@ export default function Forced_Induction_System_Diesel_Engine() {
         { name: "Forced Induction System Parts", slug: "?" },
     ];
 
-    const basePath = "/Chapter6_Engine_Base_System/Intake_System/Forced_Induction_System_Diesel_Engine/";
+    const basePath = "?";
 
     return (
 
@@ -50,9 +50,7 @@ export default function Forced_Induction_System_Diesel_Engine() {
                 ))}
             </CollapsibleCards>
 
-            <CollapsibleSection title="Forced Induction System - Diesel Engine" defaultOpen={false}>
-                <Forced_Induction_System_Parts />
-            </CollapsibleSection>
+       
         </div>
     );
 }

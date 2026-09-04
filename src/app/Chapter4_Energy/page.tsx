@@ -1,8 +1,5 @@
-// src\app\Chapter4_Energy\page.tsx
-
-
-
 // src\app\Chapter4_Energy\energy_types\page.tsx
+
 import Link from "next/link";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
 import CollapsibleCards from "@/components/CollapsibleCards";

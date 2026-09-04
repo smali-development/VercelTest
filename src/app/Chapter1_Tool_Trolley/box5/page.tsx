@@ -5,16 +5,16 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box5() {
-    const tools = [
-        { name: "Wheel Spanner", slug: "Wheel_Spanner" },
-        { name: "Oil Can", slug: "Oil_Can" },
-        { name: "Chisel", slug: "Chisel" },
-        { name: "Oil Filter Wrench", slug: "Oil_Filter_Wrench" },
-        { name: "Center Punch", slug: "Center_Punch" },
-        { name: "Scraper", slug: "Scraper" },
-    ];
+  const tools = [
+  { name: "Wheel Spanner", slug: "?" },
+  { name: "Oil Can", slug: "?" },
+  { name: "Chisel", slug: "?" },
+  { name: "Oil Filter Wrench", slug: "?" },
+  { name: "Center Punch", slug: "?" },
+  { name: "Scraper", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box5";
+const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

@@ -6,15 +6,15 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box3() {
-    const tools = [
-        { name: "Combination Spanner", slug: "Combination_Spanner" },
-        { name: "Ring Spanner", slug: "Ring_Spanner" },
-        { name: "Box End Spanner", slug: "Box_End_Spanner" },
-        { name: "Open End Spanner", slug: "Open_End_Spanner" },
-        { name: "Adjustable (Dock) Spanner", slug: "Adjustable_Dock_Spanner" },
-    ];
+  const tools = [
+  { name: "Combination Spanner", slug: "?" },
+  { name: "Ring Spanner", slug: "?" },
+  { name: "Box End Spanner", slug: "?" },
+  { name: "Open End Spanner", slug: "?" },
+  { name: "Adjustable (Dock) Spanner", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box3";
+const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

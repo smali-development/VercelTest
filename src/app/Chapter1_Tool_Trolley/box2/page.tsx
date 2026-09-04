@@ -5,19 +5,19 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box2() {
-    const tools = [
-        { name: "Piston Ring Expander", slug: "Piston_Ring_Expander" },
-        { name: "Grip Pliers", slug: "Grip_Pliers" },
-        { name: "Monkey Pliers", slug: "Monkey_Pliers" },
-        { name: "Slip Joint Pliers", slug: "Slip_Joint_Pliers" },
-        { name: "Combination Pliers", slug: "Combination_Pliers" },
-        { name: "Cutter Nose Pliers", slug: "Cutter_Nose_Pliers" },
-        { name: "Long Nose Pliers", slug: "Long_Nose_Pliers" },
-        { name: "Circlip Pliers (Internal)", slug: "Circlip_Pliers_Internal" },
-        { name: "Circlip Pliers (External)", slug: "Circlip_Pliers_External" },
-    ];
+   const tools = [
+  { name: "Piston Ring Expander", slug: "?" },
+  { name: "Grip Pliers", slug: "?" },
+  { name: "Monkey Pliers", slug: "?" },
+  { name: "Slip Joint Pliers", slug: "?" },
+  { name: "Combination Pliers", slug: "?" },
+  { name: "Cutter Nose Pliers", slug: "?" },
+  { name: "Long Nose Pliers", slug: "?" },
+  { name: "Circlip Pliers (Internal)", slug: "?" },
+  { name: "Circlip Pliers (External)", slug: "?" },
+];
 
-    const basePath = "/Chapter1_Tool_Trolley/box2";
+    const basePath = "?";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">

@@ -5,32 +5,32 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box1() {
-    const tools = [
-        { name: "Torque Wrench", slug: "Torque_Wrench" },
-        { name: "T-Handle Wrench", slug: "T_Handle_Wrench" },
-        { name: "T-Handle Socket Wrench", slug: "T_Handle_Socket_Wrench" },
-        { name: "Phillips Screwdriver", slug: "Phillips_Screwdriver" },
-        { name: "Flat Head Screwdriver", slug: "Flat_Head_Screwdriver" },
-        { name: "Tyre Lever", slug: "Tyre_Lever" },
-        { name: "Two-Jaw Puller", slug: "Two_Jaw_Puller" },
-        { name: "Three-Jaw Puller", slug: "Three_Jaw_Puller" },
+    const elements = [
+        { name: "Torque Wrench", slug: "?" },
+        { name: "T-Handle Wrench", slug: "?" },
+        { name: "T-Handle Socket Wrench", slug: "?" },
+        { name: "Phillips Screwdriver", slug: "?" },
+        { name: "Flat Head Screwdriver", slug: "?" },
+        { name: "Tyre Lever", slug: "?" },
+        { name: "Two-Jaw Puller", slug: "?" },
+        { name: "Three-Jaw Puller", slug: "?" },
     ];
 
-    const basePath = "/Chapter1_Tool_Trolley/box1";
+    const basePath = "?";
 
     return (
-        
+
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
             <div>
                 <h2 className="section-heading text-xl font-bold mb-4">Box No. 1</h2>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
-                    {tools.map((tool) => (
-                        <li key={tool.slug}>
+                    {elements.map((element) => (
+                        <li key={element.slug}>
                             <Link
-                                href={`${basePath}/${tool.slug}`}
+                                href={`${basePath}/${element.slug}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                             >
-                                {tool.name}
+                                {element.name}
                             </Link>
                         </li>
                     ))}
@@ -39,10 +39,10 @@ export default function Box1() {
 
             {/* Images / Cards Partition (Deferred Loading) */}
             <CollapsibleCards title="View Tool Cards & Images">
-                {tools.map((tool, index) => (
+                {elements.map((element, index) => (
                     <CardShadcn3BunchDiv_CardName
-                        key={tool.name || index}
-                        cardName={tool.name}
+                        key={element.name || index}
+                        cardName={element.name}
                     />
                 ))}
             </CollapsibleCards>
