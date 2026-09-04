@@ -1,35 +1,58 @@
-import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
-import React from 'react'
 
-const Drive_Belt_Type = () => {
+
+import Link from "next/link";
+import CollapsibleCards from "@/components/CollapsibleCards";
+import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
+
+export default function Drive_Belt_Type() {
+    const elements = [
+        { name: "Drive Gear", slug: "?" },
+        { name: "Drive Chain", slug: "?" },
+        { name: "Drive Belt", slug: "?" },
+        { name: "V-Belt", slug: "?" },
+        { name: "V-Ribbed Belt", slug: "?" },
+    ];
+
+    const basePath = "/Chapter6_Engine_Base_System/Engine_Proper_System/Drive_Belt_Type";
+
     return (
-        <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
+        <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
+            <div>
 
-            <div>
-                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Base System</h1>
-                <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Proper System</h2>
-                <h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Drive Belt Type</h3>
-                {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
-            </div>
-            <div>
-                {/* <h2 className="section-heading">Fire Triangle Elements</h2> */}
-                <ol>
-                    <li>1. Drive Gear</li>
-                    <li>2. Drive Chain</li>
-                    <li>3. Drive Belt</li>
-                    <li>4. V-Belt</li>
-                    <li>5. V-Ribbed Belt</li>
+
+                <div>
+                    <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Base System</h1>
+                    <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Proper System</h2>
+                    <h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Drive_Belt Type</h3>
+                    {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
+                </div>
+                <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
+                    {elements.map((element) => (
+                        <li key={element.slug}>
+                            <Link
+                                href={`${basePath}/${element.slug}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                            >
+                                {element.name}
+                            </Link>
+                        </li>
+                    ))}
                 </ol>
             </div>
-            <CardShadcn3BunchDiv_CardName cardName="Drive Gear" />
-            <CardShadcn3BunchDiv_CardName cardName="Drive Chain" />
-            <CardShadcn3BunchDiv_CardName cardName="Drive Belt" />
-            <CardShadcn3BunchDiv_CardName cardName="V-Belt" />
-            <CardShadcn3BunchDiv_CardName cardName="V-Ribbed Belt" />
 
+            {/* Images / Cards Partition (Deferred Loading) */}
+            <CollapsibleCards title="View Tool Cards & Images">
+                {elements.map((element) => (
+                    <CardShadcn3BunchDiv_CardName
+                        key={element.slug}
+                        cardName={element.name}
+                    />
+                ))}
+            </CollapsibleCards>
 
         </div>
-    )
+
+
+    );
 }
 
-export default Drive_Belt_Type

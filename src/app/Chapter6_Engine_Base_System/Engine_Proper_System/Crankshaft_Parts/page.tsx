@@ -1,47 +1,63 @@
-import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
-import React from 'react'
 
-const Crankshaft_Parts = () => {
+
+import Link from "next/link";
+import CollapsibleCards from "@/components/CollapsibleCards";
+import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
+
+export default function Crankshaft_Parts() {
+    const elements = [
+        { name: "Piston Connecting Rod", slug: "?" },
+        { name: "Main Bearing", slug: "?" },
+        { name: "Piston", slug: "?" },
+        { name: "Cam Shaft", slug: "?" },
+        { name: "Flywheel", slug: "?" },
+        { name: "Crank Shaft Pulley", slug: "?" },
+        { name: "Counter Weights", slug: "?" },
+        { name: "Crank Pins", slug: "?" },
+        { name: "Thrust Bearing", slug: "?" },
+        { name: "Oil Pump", slug: "?" },
+        { name: "Timing Chain and Timing Belt", slug: "?" },
+    ];
+
+    const basePath = "/Chapter6_Engine_Base_System/Engine_Proper_System/Crankshaft_Parts";
+
     return (
-        <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
+        <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
+            <div>
 
-            <div>
-                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Base System</h1>
-                <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Proper System</h2>
-                <h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Crankshaft Parts</h3>
-                {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
-            </div>
-            <div>
-                {/* <h2 className="section-heading">Fire Triangle Elements</h2> */}
-                <ol>
-                    <li>1. Piston Connecting Rod</li>
-                    <li>2. Main Bearing</li>
-                    <li>3. Piston</li>
-                    <li>4. Cam Shaft</li>
-                    <li>5. Flywheel</li>
-                    <li>6. Crank Shaft Pulley</li>
-                    <li>7. Counter Weights</li>
-                    <li>8. Crank Pins</li>
-                    <li>9. Thrust Bearing</li>
-                    <li>10. Oil Pump</li>
-                    <li>11. Timing Chain and Timing Belt</li>
+
+                <div>
+                    <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Base System</h1>
+                    <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Proper System</h2>
+                    <h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Crankshaft Parts</h3>
+                    {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
+                </div>
+                <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
+                    {elements.map((element) => (
+                        <li key={element.slug}>
+                            <Link
+                                href={`${basePath}/${element.slug}`}
+                                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+                            >
+                                {element.name}
+                            </Link>
+                        </li>
+                    ))}
                 </ol>
             </div>
-            <CardShadcn3BunchDiv_CardName cardName="Piston Connecting Rod" />
-            <CardShadcn3BunchDiv_CardName cardName="Main Bearing" />
-            <CardShadcn3BunchDiv_CardName cardName="Piston" />
-            <CardShadcn3BunchDiv_CardName cardName="Cam Shaft" />
-            <CardShadcn3BunchDiv_CardName cardName="Flywheel" />
-            <CardShadcn3BunchDiv_CardName cardName="Crank Shaft Pulley" />
-            <CardShadcn3BunchDiv_CardName cardName="Counter Weights" />
-            <CardShadcn3BunchDiv_CardName cardName="Crank Pins" />
-            <CardShadcn3BunchDiv_CardName cardName="Thrust Bearing" />
-            <CardShadcn3BunchDiv_CardName cardName="Oil Pump" />
-            <CardShadcn3BunchDiv_CardName cardName="Timing Chain and Timing Belt" />
 
+            {/* Images / Cards Partition (Deferred Loading) */}
+            <CollapsibleCards title="View Tool Cards & Images">
+                {elements.map((element) => (
+                    <CardShadcn3BunchDiv_CardName
+                        key={element.slug}
+                        cardName={element.name}
+                    />
+                ))}
+            </CollapsibleCards>
 
         </div>
-    )
-}
 
-export default Crankshaft_Parts
+
+    );
+}
