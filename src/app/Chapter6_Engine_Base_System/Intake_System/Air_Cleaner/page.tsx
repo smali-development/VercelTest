@@ -6,7 +6,8 @@ const Air_Cleaner = () => {
         <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
 
             <div>
-                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Intake_System</h1>
+                <p >Engine Base System</p>
+                <p >2. Intake_System</p>
                 <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Air Cleaner</h2>
                 {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
             </div>

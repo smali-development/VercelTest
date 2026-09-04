@@ -1,7 +1,4 @@
 import CollapsibleSection from "@/components/CollapsibleSection";
-import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
-import Link from 'next/link'
-
 import Cylinder_Head_Parts from './Cylinder_Head_Parts/page';
 import Cylinder_Block_Parts from "./Cylinder_Block_Parts/page";
 import Piston_Parts from "./Piston_Parts/page";
@@ -15,8 +12,9 @@ export default async function Engine_Proper_System() {
     return (
         <div className="max-w-5xl mx-auto p-6 space-y-6">
             <div>
+                <p>Engine Base System</p>
                 <h1 className="text-3xl font-extrabold mb-2 text-blue-900">
-                    Chapter 6 — Engine Proper System
+                    Engine Proper System
                 </h1>
                 <p className="text-slate-600 mb-8">
                     The engine proper system is organised into several components, each playing a crucial role in the overall operation of the engine.

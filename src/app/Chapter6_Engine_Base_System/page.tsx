@@ -1,44 +1,74 @@
 import CardShadcn3BunchDiv_CardName from '@/components/CardShadcn3BunchDiv_CardName'
-import Link from 'next/link'
-import React from 'react'
+import CollapsibleSection from '@/components/CollapsibleSection';
+import Engine_Proper_System from './Engine_Proper_System/page';
+import Intake_System from './Intake_System/page';
+import Fuel_System from './Fuel_System/page';
+import Ignition_System from './Ignition_System/page';
+import Exhaust_System from './Exhaust_System/page';
+import Lubrication_System from './Lubrication_System/page';
+import Sensor_System from './Sensor_System/page';
+import Scanner_Diagnostics_System from './Scanner_Diagnostics_System/page';
 
 
-const Chapter6_Engine_Base_System = () => {
+export default async function Chapter6_Engine_Base_System() {
     return (
-        <div className="flex flex-col gap-8 p-8 max-w-[--breakpoint-2xl] mx-auto">
-
+        <div className="max-w-5xl mx-auto p-6 space-y-6">
             <div>
-                <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter6 Engine Base System</h1>
-                <p className="text-slate-600 mb-8">A complete engine is made up of ten major sub-systems:.</p>
+                <h1 className="text-3xl font-extrabold mb-2 text-blue-900">
+                    Chapter 6 — Engine Base System
+                </h1>
+                <p className="text-slate-600 mb-8">
+                    The engine base system is organised into several components, each playing a crucial role in the overall operation of the engine.
+                </p>
             </div>
-            <div>
-                <h2 className="section-heading">Ten major sub-systems:</h2>
-                <ol>
+            <h1 className="text-2xl font-bold text-slate-900 mb-6">
+                Engine Base System Overview
+            </h1>
 
-                    <li><Link href={"/Chapter6_Engine_Base_System/Engine_Proper_System"} className="text-blue-500 hover:underline">1. Engine Proper System</Link></li>
-                    <li><Link href={"/Chapter6_Engine_Base_System/Intake_System"} className="text-blue-500 hover:underline">2. Intake System</Link></li>
-                    <li>3. Fuel System</li>
-                    <li>4. Ignition System</li>
-                    <li>5. Exhaust System</li>
-                    <li>6. Lubrication System</li>
-                    <li>7. Cooling System</li>
-                    <li>8. Electrical System</li>
-                    <li>9. Sensor System</li>
-                    <li>10. Scanner Diagnostics System</li>
-                </ol>
-            </div>
-            <CardShadcn3BunchDiv_CardName cardName="Engine Proper System" />
-            <CardShadcn3BunchDiv_CardName cardName="Intake System" />
-            <CardShadcn3BunchDiv_CardName cardName="Fuel System" />
-            <CardShadcn3BunchDiv_CardName cardName="Ignition System" />
-            <CardShadcn3BunchDiv_CardName cardName="Exhaust System" />
-            <CardShadcn3BunchDiv_CardName cardName="Lubrication System" />
-            <CardShadcn3BunchDiv_CardName cardName="Cooling System" />
-            <CardShadcn3BunchDiv_CardName cardName="Electrical System" />
-            <CardShadcn3BunchDiv_CardName cardName="Sensor System" />
-            <CardShadcn3BunchDiv_CardName cardName="Scanner Diagnostics System" />
+            {/* Render Engine_Proper_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Engine Proper System" defaultOpen={false}>
+                <Engine_Proper_System />
+            </CollapsibleSection>
+
+            {/* Render Intake_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Intake System" defaultOpen={false}>
+                <Intake_System />
+            </CollapsibleSection>
+
+            {/* Render Fuel_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Fuel System" defaultOpen={false}>
+                <Fuel_System />
+            </CollapsibleSection>
+
+            {/* Render Ignition_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Ignition System" defaultOpen={false}>
+                <Ignition_System />
+            </CollapsibleSection>
+
+            {/* Render Exhaust_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Exhaust System" defaultOpen={false}>
+                <Exhaust_System />
+            </CollapsibleSection>
+
+            {/* Render Lubrication_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Lubrication System" defaultOpen={false}>
+                <Lubrication_System />
+            </CollapsibleSection>
+
+            {/* Render Sensor_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Sensor System" defaultOpen={false}>
+                <Sensor_System />
+            </CollapsibleSection>
+
+            {/* Render Scanner_Diagnostics_System page content inside a CollapsibleSection */}
+            <CollapsibleSection title="Scanner Diagnostics System" defaultOpen={false}>
+                <Scanner_Diagnostics_System />
+            </CollapsibleSection>
+
+
         </div>
-    )
+    );
 }
 
-export default Chapter6_Engine_Base_System
+
+

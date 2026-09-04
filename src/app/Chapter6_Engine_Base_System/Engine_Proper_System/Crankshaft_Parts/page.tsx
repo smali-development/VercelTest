@@ -27,9 +27,8 @@ export default function Crankshaft_Parts() {
 
 
                 <div>
-                    <h1 className="text-3xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Base System</h1>
-                    <h2 className="text-2xl font-extrabold text-brand-600 mb-2  text-blue-900">Chapter7 Engine Proper System</h2>
-                    <h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Crankshaft Parts</h3>
+                    <p>Chapter7 Engine Base System</p>
+                    <p>Engine Proper System</p><h3 className="text-1xl font-extrabold text-brand-600 mb-2  text-blue-900">Crankshaft Parts</h3>
                     {/* <p className="text-slate-600 mb-8">Fire needs three elements to occur, known together as the Fire Triangle. Removing any one of the three will extinguish or prevent a fire.</p> */}
                 </div>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
