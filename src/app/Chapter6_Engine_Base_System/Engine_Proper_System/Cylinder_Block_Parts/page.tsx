@@ -51,7 +51,7 @@ export default function Cylinder_Block_Parts() {
         </div>
         <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
           {elements.map((element) => (
-            <li key={element.slug}>
+            <li key={element.name}>
               <Link
                 href={`${basePath}/${element.slug}`}
                 className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
@@ -67,7 +67,7 @@ export default function Cylinder_Block_Parts() {
       <CollapsibleCards title="View Tool Cards & Images">
         {elements.map((element) => (
           <CardShadcn3BunchDiv_CardName
-            key={element.slug}
+            key={element.name}
             cardName={element.name}
           />
         ))}

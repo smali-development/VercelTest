@@ -5,19 +5,19 @@ import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardN
 import CollapsibleCards from "@/components/CollapsibleCards";
 
 export default function Box2() {
-   const tools = [
-  { name: "Piston Ring Expander", slug: "?" },
-  { name: "Grip Pliers", slug: "?" },
-  { name: "Monkey Pliers", slug: "?" },
-  { name: "Slip Joint Pliers", slug: "?" },
-  { name: "Combination Pliers", slug: "?" },
-  { name: "Cutter Nose Pliers", slug: "?" },
-  { name: "Long Nose Pliers", slug: "?" },
-  { name: "Circlip Pliers (Internal)", slug: "?" },
-  { name: "Circlip Pliers (External)", slug: "?" },
-];
+    const tools = [
+        { name: "Piston Ring Expander", slug: "?" },
+        { name: "Grip Pliers", slug: "?" },
+        { name: "Monkey Pliers", slug: "?" },
+        { name: "Slip Joint Pliers", slug: "?" },
+        { name: "Combination Pliers", slug: "?" },
+        { name: "Cutter Nose Pliers", slug: "?" },
+        { name: "Long Nose Pliers", slug: "?" },
+        { name: "Circlip Pliers (Internal)", slug: "?" },
+        { name: "Circlip Pliers (External)", slug: "?" },
+    ];
 
-    const basePath = "?";
+    const basePath = "";
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
@@ -27,7 +27,7 @@ export default function Box2() {
                 <h2 className="section-heading text-xl font-bold mb-4">Box No. 2</h2>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
                     {tools.map((tool) => (
-                        <li key={tool.slug}>
+                        <li key={tool.name}>
                             <Link
                                 href={`${basePath}/${tool.slug}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"

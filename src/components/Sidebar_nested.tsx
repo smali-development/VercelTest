@@ -489,9 +489,9 @@ function SidebarItem({ node, pathname, isSidebarExpanded, level }: SidebarItemPr
             {/* Recursive Rendering of Children */}
             {isSidebarExpanded && hasChildren && isOpen && (
                 <ul className="ml-2 border-l border-gray-200 pl-1 space-y-0.5">
-                    {node.children!.map((childNode) => (
+                    {node.children!.map((childNode, index) => (
                         <SidebarItem
-                            key={childNode.href}
+                            key={childNode.href && childNode.href !== "?" ? childNode.href : `${childNode.label}-${index}`}
                             node={childNode}
                             pathname={pathname}
                             isSidebarExpanded={isSidebarExpanded}

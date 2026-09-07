@@ -25,7 +25,7 @@ export default function Box1() {
                 <h2 className="section-heading text-xl font-bold mb-4">Box No. 1</h2>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
                     {elements.map((element) => (
-                        <li key={element.slug}>
+                        <li key={element.name}>
                             <Link
                                 href={`${basePath}/${element.slug}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"

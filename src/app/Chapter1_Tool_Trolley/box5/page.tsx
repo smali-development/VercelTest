@@ -23,7 +23,7 @@ const basePath = "?";
                 <h2 className="section-heading text-xl font-bold mb-4">Box No. 5</h2>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700 font-medium">
                     {tools.map((tool) => (
-                        <li key={tool.slug}>
+                        <li key={tool.name}>
                             <Link
                                 href={`${basePath}/${tool.slug}`}
                                 className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
