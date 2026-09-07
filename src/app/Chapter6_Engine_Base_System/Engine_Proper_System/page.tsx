@@ -3,7 +3,8 @@
 import Link from "next/link";
 import CollapsibleCards from "@/components/CollapsibleCards";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
-import { removeLeadingNumber } from "@/utils/common_utilily";
+import { formatAppPath, removeLeadingNumber } from "@/utils/common_utilily";
+import { fileURLToPath } from "url";
 
 export default async function Engine_Proper_System() {
     const elements = [
@@ -17,6 +18,11 @@ export default async function Engine_Proper_System() {
         { name: "Oil Pan", slug: "?" },
     ];
     const basePath = "?";
+    // Searching path preparation ////
+    const currentFilePath = fileURLToPath(import.meta.url);  // returns e.g. "/Chapter6_Engine_Base_System/Intake_System/..."
+
+    const pathString = formatAppPath(currentFilePath); // pathString Output: "Chapter6_Engine_Base_System Intake_System Forced_Induction_System_Diesel_Engine Forced_Induction_System_Parts"
+    //////////////////////////
     return (
         <div className="max-w-5xl mx-auto p-6 space-y-6">
             <div>
@@ -53,6 +59,7 @@ export default async function Engine_Proper_System() {
                     <CardShadcn3BunchDiv_CardName
                         key={element.name}
                         cardName={removeLeadingNumber(element.name)}
+                        pathString={pathString}
                     />
                 ))}
             </CollapsibleCards>

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
 import CollapsibleCards from "@/components/CollapsibleCards";
+import { formatAppPath } from "@/utils/common_utilily";
+import { fileURLToPath } from "url";
 
 export default function Box4() {
     const tools = [
@@ -21,6 +23,12 @@ export default function Box4() {
     ];
 
     const basePath = "?";
+
+    // Searching path preparation ////
+    const currentFilePath = fileURLToPath(import.meta.url);  // returns e.g. "/Chapter6_Engine_Base_System/Intake_System/..."
+
+    const pathString = formatAppPath(currentFilePath); // pathString Output: "Chapter6_Engine_Base_System Intake_System Forced_Induction_System_Diesel_Engine Forced_Induction_System_Parts"
+    //////////////////////////
 
     return (
         <div className="flex flex-col gap-5 p-5 max-w-[--breakpoint-2xl] mx-auto">
@@ -47,6 +55,7 @@ export default function Box4() {
                     <CardShadcn3BunchDiv_CardName
                         key={tool.slug}
                         cardName={tool.name}
+                        pathString={pathString}
                     />
                 ))}
             </CollapsibleCards>

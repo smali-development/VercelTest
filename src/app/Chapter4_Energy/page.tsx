@@ -22,6 +22,7 @@ export default function Chapter4_Energy() {
     const pathname = usePathname(); // returns e.g. "/Chapter6_Engine_Base_System/Intake_System/..."
 
     const pathString = pathname.split('/').filter(Boolean).join(' ');
+    // pathString Output: "Chapter6_Engine_Base_System Intake_System Forced_Induction_System_Diesel_Engine Forced_Induction_System_Parts"
 
 
     const basePath = "?";

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import CardShadcn3BunchDiv_CardName from "@/components/CardShadcn3BunchDiv_CardName";
 import CollapsibleCards from "@/components/CollapsibleCards";
+import { formatAppPath } from "@/utils/common_utilily";
+import { fileURLToPath } from "url";
 
 export default function Box1() {
     const elements = [
@@ -17,6 +19,11 @@ export default function Box1() {
     ];
 
     const basePath = "?";
+    // Searching path preparation ////
+        const currentFilePath = fileURLToPath(import.meta.url);  // returns e.g. "/Chapter6_Engine_Base_System/Intake_System/..."
+    
+        const pathString = formatAppPath(currentFilePath); // pathString Output: "Chapter6_Engine_Base_System Intake_System Forced_Induction_System_Diesel_Engine Forced_Induction_System_Parts"
+        //////////////////////////
 
     return (
 
@@ -43,6 +50,7 @@ export default function Box1() {
                     <CardShadcn3BunchDiv_CardName
                         key={element.name || index}
                         cardName={element.name}
+                        pathString={pathString}
                     />
                 ))}
             </CollapsibleCards>

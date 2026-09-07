@@ -4,14 +4,16 @@ import CardShadcn from "./CardShadcn";
 
 interface CardShadcn3BunchDiv_CardNameProps {
     cardName: string;
+    pathString?: string; // Optional prop for pathString
 }
 
 export default function CardShadcn3BunchDiv_CardName({
     cardName,
+    pathString,
 }: CardShadcn3BunchDiv_CardNameProps) {
     const [images, setImages] = useState<string[]>([]);
     const viewImagesLink = `https://www.bing.com/images/search?q=${encodeURIComponent(
-        cardName
+        pathString ? `${pathString} ${cardName}` : cardName
     )}`;
 
     useEffect(() => {
