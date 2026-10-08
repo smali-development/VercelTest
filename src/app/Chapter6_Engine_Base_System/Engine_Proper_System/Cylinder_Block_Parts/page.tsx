@@ -76,7 +76,7 @@ export default function Cylinder_Block_Parts() {
         {elements.map((element) => (
           <CardShadcn3BunchDiv_CardName
             key={element.name}
-            cardName={element.name}
+            cardName={`${element.name}`}
             pathString={pathString}
           />
         ))}
@@ -87,4 +87,3 @@ export default function Cylinder_Block_Parts() {
 
   );
 }
-

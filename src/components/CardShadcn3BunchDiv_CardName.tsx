@@ -41,6 +41,7 @@ export default function CardShadcn3BunchDiv_CardName({
         <div className="border border-slate-200 rounded-lg p-4">
             <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="font-semibold text-slate-800">{cardName}</span>
+                <span className="font-normal text-slate-800">{pathString?.replaceAll(" ", " > ")}</span>
                 <a
                     href={viewImagesLink}
                     target="_blank"
