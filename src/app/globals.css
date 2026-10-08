@@ -71,3 +71,66 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  body {
+    display: block !important;
+    background: white !important;
+  }
+
+  header,
+  aside,
+  .print-hidden {
+    display: none !important;
+  }
+
+  .app-layout-main-container {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .app-layout-main {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .app-layout-content {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .print-card-container,
+  .print-card-content {
+    overflow: visible !important;
+  }
+
+  .print-card-content > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-card-content a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
