@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { RefreshCw } from "lucide-react";
 import CardShadcn from "./CardShadcn";
 
 interface CardShadcn3BunchDiv_CardNameProps {
@@ -12,6 +13,8 @@ export default function CardShadcn3BunchDiv_CardName({
     pathString,
 }: CardShadcn3BunchDiv_CardNameProps) {
     const [images, setImages] = useState<string[]>([]);
+    const [reloadToken, setReloadToken] = useState(0);
+    const [isLoadingImages, setIsLoadingImages] = useState(false);
     const viewImagesLink = `https://www.bing.com/images/search?q=${encodeURIComponent(
         pathString ? `${pathString} ${cardName}` : cardName
     )}`;
@@ -20,14 +23,26 @@ export default function CardShadcn3BunchDiv_CardName({
         let cancelled = false;
 
         async function loadImages() {
+            setIsLoadingImages(true);
             try {
-                const res = await fetch(`/api/images?name=${encodeURIComponent(cardName)}`);
-                const data = await res.json();
-                if (!cancelled && data.images) {
+                const res = await fetch(
+                    `/api/images?name=${encodeURIComponent(cardName)}&reload=${Date.now()}`,
+                    { cache: "no-store" }
+                );
+                if (!res.ok) {
+                    throw new Error(`Image request failed with status ${res.status}`);
+                }
+
+                const data: { images: string[] } = await res.json();
+                if (!cancelled) {
                     setImages(data.images);
                 }
             } catch (error) {
                 console.error("Failed to load images:", error);
+            } finally {
+                if (!cancelled) {
+                    setIsLoadingImages(false);
+                }
             }
         }
 
@@ -35,7 +50,7 @@ export default function CardShadcn3BunchDiv_CardName({
         return () => {
             cancelled = true;
         };
-    }, [cardName]);
+    }, [cardName, reloadToken]);
 
     return (
         <div className="border border-slate-200 rounded-lg p-4">
@@ -51,12 +66,23 @@ export default function CardShadcn3BunchDiv_CardName({
                 >
                     View pictures ↗
                 </a>
+                <button
+                    type="button"
+                    onClick={() => setReloadToken(Date.now())}
+                    disabled={isLoadingImages}
+                    className="pill-link whitespace-nowrap disabled:opacity-50"
+                    aria-label={`Reload pictures for ${cardName}`}
+                    title="Reload updated pictures"
+                >
+                    <RefreshCw size={16} className="inline mr-1" />
+                    {isLoadingImages ? "Reloading..." : "Reload pictures"}
+                </button>
             </div>
 
             <div className="grid grid-cols-3 gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory">
                 {images.map((imagePath, index) => (
                     <div key={index}>
-                        <CardShadcn imagePath={imagePath} />
+                        <CardShadcn imagePath={imagePath} reloadToken={reloadToken} />
                     </div>
                 ))}
             </div>

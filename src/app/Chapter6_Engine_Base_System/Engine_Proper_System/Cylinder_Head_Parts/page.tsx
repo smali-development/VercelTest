@@ -13,7 +13,7 @@ export default function Cylinder_Head_Parts() {
         { name: "Valve Springs", slug: "?" },
         { name: "Valve Seats", slug: "?" },
         { name: "Valve Guide", slug: "?" },
-        { name: "Key Lock / Cotter (Keeper)", slug: "?" },
+        { name: "Key Lock Cotter (Keeper)", slug: "?" },
         { name: "Combustion Chamber", slug: "?" },
         { name: "Spark Plug", slug: "?" },
         { name: "Fuel Injectors", slug: "?" },

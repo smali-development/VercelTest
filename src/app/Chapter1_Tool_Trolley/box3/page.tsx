@@ -46,7 +46,7 @@ export default function Box3() {
             <CollapsibleCards title="View Tool Cards & Images">
                 {tools.map((tool) => (
                     <CardShadcn3BunchDiv_CardName
-                        key={tool.slug}
+                        key={tool.name}
                         cardName={tool.name}
                         pathString={pathString}
                     />

@@ -4,13 +4,14 @@ import { getImagesByCardName, getImageCache } from "@/lib/imageCache";
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const cardName = searchParams.get("name");
+  const headers = { "Cache-Control": "no-store" };
 
   // اگر name نہ بھیجا گیا ہو تو کیش کی تمام امیجز کی لسٹ بھیجیں (Admin Page کے لیے)
   if (!cardName) {
-    return NextResponse.json({ images: getImageCache() });
+    return NextResponse.json({ images: getImageCache() }, { headers });
   }
 
   // cardName کے مطابق امیجز واپس کریں
   const images = getImagesByCardName(cardName);
-  return NextResponse.json({ images });
+  return NextResponse.json({ images }, { headers });
 }
