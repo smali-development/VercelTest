@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 
 const EXTENSIONS = new Set(["jpg", "jpeg", "avif", "webp", "png"]);
-let imageCache: string[] | null = null;
 
 // public/images ڈائریکٹری سے فائلیں پڑھ کر کیش اپ ڈیٹ کریں
 export function refreshImageCache(): string[] {
@@ -15,24 +14,19 @@ export function refreshImageCache(): string[] {
         const allFiles = fs.readdirSync(publicImagesDir);
 
         // صرف اجازت شدہ ایکسٹینشنز والی فائلیں فلٹر کریں
-        imageCache = allFiles.filter((file) => {
+        return allFiles.filter((file) => {
             const ext = file.split(".").pop()?.toLowerCase();
             return ext ? EXTENSIONS.has(ext) : false;
         });
     } catch (error) {
         console.error("Failed to read image directory:", error);
-        imageCache = [];
+        return [];
     }
-
-    return imageCache;
 }
 
-// کیش سے فائل لسٹ حاصل کریں
+// Always read the directory so files added outside the upload endpoint appear immediately.
 export function getImageCache(): string[] {
-    if (!imageCache) {
-        return refreshImageCache();
-    }
-    return imageCache;
+    return refreshImageCache();
 }
 
 // cardName کے حساب سے (Piston1, Piston2, Piston3) کیش سے امیجز تلاش کریں

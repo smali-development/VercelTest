@@ -20,7 +20,7 @@ export default function Cylinder_Head_Parts() {
         { name: "Spring Retainer", slug: "?" },
         { name: "Cam Shaft", slug: "?" },
         { name: "Cam Lock", slug: "?" },
-        { name: "Rocker Arm / Tappet", slug: "?" },
+        { name: "Rocker Arm Tappet", slug: "?" },
         { name: "Shim-Type Tappet", slug: "?" },
         { name: "Fix-Type Tappet", slug: "?" },
         { name: "Hydraulic Lifter Tappet", slug: "?" },
